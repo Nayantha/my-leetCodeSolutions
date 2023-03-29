@@ -1,7 +1,8 @@
-from find_the_index_of_the_first_occurrence_in_a_string import Solution
+from search_insert_position import Solution
+
 if __name__ == '__main__':
-    haystack = "leetcode"
-    needle = "leeto"
+    nums = [1,2,4,6,7]
+    target = 3
     sol = Solution()
-    print(sol.strStr(haystack=haystack, needle=needle))
+    print(sol.searchInsert(nums=nums, target=target))
     pass
