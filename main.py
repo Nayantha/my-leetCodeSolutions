@@ -1,9 +1,7 @@
-from remove_element import Solution
+from find_the_index_of_the_first_occurrence_in_a_string import Solution
 if __name__ == '__main__':
-    nums = [3, 2, 2, 3]
-    val = 3
+    haystack = "leetcode"
+    needle = "leeto"
     sol = Solution()
-    print("m" , nums)
-    print(sol.removeElement(nums, val))
-    print("m", nums)
+    print(sol.strStr(haystack=haystack, needle=needle))
     pass
