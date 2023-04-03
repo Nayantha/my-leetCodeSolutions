@@ -11,6 +11,14 @@ from typing import Optional, List
 
 
 class Solution:
-    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def __init__(self):
+        self.list = []
 
-        pass
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        if root is None:
+            self.list[:] = [x for x in self.list if x is not None]
+            return list(self.list)
+        self.inorderTraversal(root.left)
+        self.list.append(root.val)
+        self.inorderTraversal(root.right)
+        return self.list
