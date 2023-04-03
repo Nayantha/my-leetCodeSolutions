@@ -1,4 +1,9 @@
 # https://leetcode.com/problems/climbing-stairs/
+
+
 class Solution:
     def climbStairs(self, n: int) -> int:
-        pass
+        one, two = 1, 1
+        for i in range(n-1):
+            one, two = one + two, one
+        return one
