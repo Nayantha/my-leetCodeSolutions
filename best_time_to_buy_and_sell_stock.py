@@ -2,9 +2,14 @@
 
 from typing import List
 def max_profit(prices: List[int]) -> int:
-    min_sell_value = min(prices)
-    sellable_price_list = prices[prices.index(min_sell_value) + 1:]
-    if not sellable_price_list:
-        return 0
-    return max(sellable_price_list) - min_sell_value
-
+    max_profit_gainable = 0
+    left = 0
+    right = 1
+    while right < len(prices):
+        profit = prices[right] - prices[left]
+        if prices[right] > prices[left]:
+            max_profit_gainable = max(profit, max_profit_gainable)
+        else:
+            left = right
+        right += 1
+    return max_profit_gainable
