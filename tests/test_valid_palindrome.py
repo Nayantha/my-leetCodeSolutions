@@ -1,6 +1,6 @@
 import pytest
 
-from valid_palindrome import is_palindrome
+from valid_palindrome import is_palindrome, is_palindrome_two_pointers
 
 
 @pytest.mark.parametrize("s, expected", [
@@ -10,4 +10,5 @@ from valid_palindrome import is_palindrome
     ("0P", False)
 ])
 def test_is_palindrome(s: str, expected: bool):
+    assert is_palindrome_two_pointers(s) == expected
     assert is_palindrome(s) == expected
