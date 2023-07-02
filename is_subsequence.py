@@ -2,5 +2,4 @@
 
 def is_subsequence(s: str, t: str) -> bool:
     sub_string = "".join([letter for letter in t if letter in s])
-    print(s, sub_string)
-    return s == sub_string
+    return s == sub_string or s in sub_string
