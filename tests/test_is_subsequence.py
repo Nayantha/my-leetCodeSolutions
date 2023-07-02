@@ -8,7 +8,8 @@ from is_subsequence import is_subsequence
     ("axc", "ahbgdc", False),
     ("acb", "ahbgdc", False),
     ("b", "abc", True),
-    ("", "abc", True)
+    ("", "abc", True),
+    ("ab", "baab", True)
 ])
 def test_is_subsequence(s: str, t: str, expected: bool):
     assert is_subsequence(s, t) == expected
