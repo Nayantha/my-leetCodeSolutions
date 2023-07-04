@@ -4,5 +4,5 @@ def can_construct(ransom_note: str, magazine: str) -> bool:
         if letter not in magazine:
             return False
         else:
-            magazine = magazine.replace(letter, "")
+            magazine = magazine.replace(letter, "", 1)
     return True
