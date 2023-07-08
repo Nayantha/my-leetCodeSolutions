@@ -9,4 +9,4 @@ from word_pattern import word_pattern
     ("aaaa", "dog cat cat dog", False)
 ])
 def test_word_pattern(pattern: str, s: str, expected: bool):
-    word_pattern(pattern, s)
+    assert word_pattern(pattern, s) == expected
