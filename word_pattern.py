@@ -1,1 +1,3 @@
 # https://leetcode.com/problems/word-pattern/?envType=study-plan-v2&envId=top-interview-150
+def word_pattern(pattern: str, s: str) -> bool:
+    ...
