@@ -10,4 +10,9 @@ class TreeNode:
 
 
 def max_depth(root: Optional[TreeNode]) -> int:
-    current_max_level = 0
+    def traverse(root: Optional[TreeNode], depth: int):
+        if not root:
+            return depth
+        return max(traverse(root.left, depth + 1), traverse(root.right, depth + 1))
+
+    return traverse(root, 0)
