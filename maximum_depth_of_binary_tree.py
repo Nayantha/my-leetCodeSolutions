@@ -9,6 +9,5 @@ class TreeNode:
         self.right = right
 
 
-class Solution:
-    def max_depth(self, root: Optional[TreeNode]) -> int:
-        ...
+def max_depth(root: Optional[TreeNode]) -> int:
+    current_max_level = 0
