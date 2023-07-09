@@ -15,7 +15,7 @@ def merge_two_lists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Opt
     if not list1:
         return list2
     ref = merged_list = ListNode()
-    while list1 and list2:
+    while list1 or list2:
         if list1.val == list2.val:
             ref.next = list1
             list1 = list1.next
