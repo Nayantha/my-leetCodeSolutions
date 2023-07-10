@@ -1,1 +1,3 @@
 # https://leetcode.com/problems/same-tree/?envType=study-plan-v2&envId=top-interview-150
+def is_same_tree(p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+    ...
