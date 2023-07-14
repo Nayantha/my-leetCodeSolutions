@@ -5,17 +5,18 @@ from binary_tree_inorder_traversal import TreeNode
 
 
 def average_of_levels(root: Optional[TreeNode]) -> List[float]:
-    same_level_node_sum = dict()
-    def traverse(node=root, level=0):
-        if not root:
-            return
+    d = {}
+
+    def dfs(node=root, level=0):
+        if not node: return
         level += 1
-        dict_value = same_level_node_sum.get(level)
-        if not dict_value:
-            same_level_node_sum[level] = node.val
+        d_v = d.get(level)
+        if not d_v:
+            d[level] = node.val
         else:
-            same_level_node_sum[level] += node.val
-        traverse(node.left, level)
-        traverse(node.right, level)
-    traverse()
-    return [value / key for key, value in same_level_node_sum.items()]
+            d[level] = d_v + node.val
+        dfs(node.left, level + 1)
+        dfs(node.right, level + 1)
+
+    dfs()
+    return [v / k for k, v in d.items()]
