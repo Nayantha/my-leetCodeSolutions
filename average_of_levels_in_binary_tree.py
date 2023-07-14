@@ -4,5 +4,19 @@ from typing import Optional, List
 from binary_tree_inorder_traversal import TreeNode
 
 
-def average_of_levels(self, root: Optional[TreeNode]) -> List[float]:
-    ...
+def average_of_levels(root: Optional[TreeNode]) -> List[float]:
+    same_level_node_sum = dict()
+
+    def traverse(node=root, level=0):
+        if not root:
+            return
+        level += 1
+        dict_value = same_level_node_sum[level]
+        if not dict_value:
+            same_level_node_sum[level] = node.val
+        else:
+            same_level_node_sum[level] += node.val
+        traverse(node.left, level)
+        traverse(node.right, level)
+
+    return [value / key for key, value in same_level_node_sum.items()]
