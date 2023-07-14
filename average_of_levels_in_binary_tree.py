@@ -8,7 +8,8 @@ def average_of_levels(root: Optional[TreeNode]) -> List[float]:
     d = {}
 
     def dfs(node=root, level=0):
-        if not node: return
+        if not node:
+            return
         level += 1
         d_v = d.get(level)
         if not d_v:
