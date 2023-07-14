@@ -11,11 +11,11 @@ def average_of_levels(root: Optional[TreeNode]) -> List[float]:
         if not node:
             return
         level += 1
-        d_v = level_against_sum_dict.get(level)
-        if not d_v:
+        current_sum_of_level = level_against_sum_dict.get(level)
+        if not current_sum_of_level:
             level_against_sum_dict[level] = node.val
         else:
-            level_against_sum_dict[level] = d_v + node.val
+            level_against_sum_dict[level] = current_sum_of_level + node.val
         dfs(node.left, level + 1)
         dfs(node.right, level + 1)
 
