@@ -10,7 +10,7 @@ def average_of_levels(root: Optional[TreeNode]) -> List[float]:
         if not root:
             return
         level += 1
-        dict_value = same_level_node_sum[level]
+        dict_value = same_level_node_sum.get(level)
         if not dict_value:
             same_level_node_sum[level] = node.val
         else:
