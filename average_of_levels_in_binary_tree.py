@@ -20,4 +20,12 @@ def average_of_levels(root: Optional[TreeNode]) -> List[float]:
         traverse(node.right, level + 1)
 
     traverse()
-    return [v / k for k, v in level_against_sum_dict.items()]
+    list = list()
+    for k, v in level_against_sum_dict.items():
+        if k == 0:
+            list.append(v)
+        elif k == 1:
+            list.append(v)
+        else:
+            list.append(k / v)
+    return list
