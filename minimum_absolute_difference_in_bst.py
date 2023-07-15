@@ -16,6 +16,6 @@ def get_minimum_difference(root: Optional[TreeNode]) -> int:
     traverse()
     node_node_complement = set()
     for i, val1 in enumerate(bts_node_values[:-1]):
-        for val2 in bts_node_values[i:]:
+        for val2 in bts_node_values[i + 1:]:
             node_node_complement.add(abs(val1 - val2))
     return min(node_node_complement)
