@@ -5,4 +5,15 @@ from binary_tree_inorder_traversal import TreeNode
 
 
 def sorted_array_to_bst(self, nums: List[int]) -> Optional[TreeNode]:
-    ...
+    # get middle element that is the root
+
+    def get_middle_element(num_list: List[int]):
+        if not num_list:
+            return
+        middle_element_index = len(num_list) // 2
+        node = TreeNode(val=num_list[middle_element_index])
+        node.left = get_middle_element(num_list[:middle_element_index])
+        node.right = get_middle_element(num_list[middle_element_index + 1:])
+        return node
+
+    return get_middle_element(nums)
