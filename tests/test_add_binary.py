@@ -8,4 +8,4 @@ from add_binary import add_binary
     ("1010", "1011", "10101")
 ])
 def test_add_binary(a: str, b: str, expectation: str):
-    add_binary(a, b)
+    assert add_binary(a, b) == expectation
