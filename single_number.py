@@ -5,4 +5,6 @@ from typing import List
 
 def single_number(nums: List[int]) -> int:
     num_and_count = Counter(nums)
-    print(num_and_count)
+    for num, count in num_and_count.items():
+        if count == 1:
+            return num
