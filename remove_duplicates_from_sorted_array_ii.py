@@ -6,3 +6,4 @@ def remove_duplicates(nums: List[int]) -> int:
     for num in nums.copy():
         if nums.count(num) > 2:
             nums.remove(num)
+    return len(nums)
