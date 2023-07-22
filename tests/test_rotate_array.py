@@ -10,4 +10,4 @@ from rotate_array import rotate
     ([-1, -100, 3, 99], 2, [3, 99, -1, -100])
 ])
 def test_rotate(nums: List[int], k: int, expected: List[int]):
-    rotate(nums, k)
+    assert rotate(nums, k) == expected
