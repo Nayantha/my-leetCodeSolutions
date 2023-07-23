@@ -2,5 +2,5 @@
 from typing import List
 
 
-def max_profit(self, prices: List[int]) -> int:
+def max_profit(prices: List[int]) -> int:
     ...
