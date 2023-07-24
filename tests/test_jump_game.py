@@ -2,7 +2,7 @@ from typing import List
 
 import pytest
 
-from jump_game import can_jump
+from jump_game import can_jump, can_jump_ii
 
 
 @pytest.mark.parametrize("nums, expected", [
@@ -11,3 +11,4 @@ from jump_game import can_jump
 ])
 def test_can_jump(nums: List[int], expected: bool):
     assert can_jump(nums) == expected
+    assert can_jump_ii(nums) == expected
