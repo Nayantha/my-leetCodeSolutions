@@ -8,4 +8,4 @@ from jump_game_ii import jump
     ([2, 3, 0, 1, 4], 2)
 ])
 def test_jump(nums: list[int], expected: int):
-    assert jump(nums) == int
+    assert jump(nums) == expected
