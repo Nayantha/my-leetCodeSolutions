@@ -1,3 +1,3 @@
 # https://leetcode.com/problems/h-index/?envType=study-plan-v2&envId=top-interview-150
-def h_index(self, citations: list[int]) -> int:
+def h_index(citations: list[int]) -> int:
     ...
