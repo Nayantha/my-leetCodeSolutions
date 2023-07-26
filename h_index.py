@@ -4,3 +4,4 @@ def h_index(citations: list[int]) -> int:
     for index, citation in enumerate(citations):
         if citation >= len(citations) - index:
             return len(citations) - index
+    return 0
