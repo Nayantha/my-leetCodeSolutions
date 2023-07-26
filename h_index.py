@@ -5,3 +5,7 @@ def h_index(citations: list[int]) -> int:
         if citation >= len(citations) - index:
             return len(citations) - index
     return 0
+
+
+def h_index_ii(citations: list[int]) -> int:
+    ...
