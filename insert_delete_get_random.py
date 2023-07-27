@@ -25,25 +25,25 @@ class RandomizedSet:
 
 class RandomizedSet2:
     def __init__(self):
-        self.value_list = list()
-        self.value_to_index_of_value_in_value_list_dict = dict()
+        self.num_list = list()
+        self.num_map = dict()
 
     def insert(self, val: int) -> bool:
-        if val not in self.value_to_index_of_value_in_value_list_dict:
-            self.value_list.append(val)
-            self.value_to_index_of_value_in_value_list_dict[val] = self.value_list.index(val)
+        if val not in self.num_map:
+            self.num_list.append(val)
+            self.num_map[val] = self.num_list.index(val)
             return True
         return False
 
     def remove(self, val: int) -> bool:
-        if val in self.value_to_index_of_value_in_value_list_dict:
-            self.value_list[len(self.value_list)], self.value_list[self.value_to_index_of_value_in_value_list_dict[val]] \
-                = self.value_list[self.value_to_index_of_value_in_value_list_dict[val]], self.value_list[
-                len(self.value_list)]
-            self.value_list.pop()
-            self.value_to_index_of_value_in_value_list_dict[
-                self.value_list[self.value_to_index_of_value_in_value_list_dict[val]]] = self.value_list.index(
-                self.value_to_index_of_value_in_value_list_dict[val])
-            self.value_to_index_of_value_in_value_list_dict.
+        if val in self.num_map:
+            self.num_list[len(self.num_list)], self.num_list[self.num_map[val]] \
+                = self.num_list[self.num_map[val]], self.num_list[
+                len(self.num_list)]
+            self.num_list.pop()
+            self.num_map[
+                self.num_list[self.num_map[val]]] = self.num_list.index(
+                self.num_map[val])
+            self.num_map.
             return True
         return False
