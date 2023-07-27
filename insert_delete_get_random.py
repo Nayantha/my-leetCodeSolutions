@@ -5,19 +5,19 @@ import random
 class RandomizedSet:
 
     def __init__(self):
-        self.randomized_set = set()
+        self.set_values = list()
 
     def insert(self, val: int) -> bool:
-        if val not in self.randomized_set:
-            self.randomized_set.add(val)
+        if val not in self.set_values:
+            self.set_values.append(val)
             return True
         return False
 
     def remove(self, val: int) -> bool:
-        if val in self.randomized_set:
-            self.randomized_set.remove(val)
+        if val in self.set_values:
+            self.set_values.remove(val)
             return True
         return False
 
     def get_random(self) -> int:
-        return random.choice(list(self.randomized_set))
+        return random.choice(self.set_values)
