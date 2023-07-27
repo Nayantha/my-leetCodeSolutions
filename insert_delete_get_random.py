@@ -21,3 +21,6 @@ class RandomizedSet:
 
     def get_random(self) -> int:
         return random.choice(self.set_values)
+
+
+class RandomizedSet2:
