@@ -1,6 +1,6 @@
 def main():
     name = input("Enter the question title:")
-    file_name = name.strip().replace(" ", "_").lower()
+    file_name = name.strip().replace(" ", "_").replace("-", "_").lower()
     print(file_name)
     with open(f"{file_name}.py", "w") as new_solution_file:
         ...
