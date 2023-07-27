@@ -27,3 +27,10 @@ class RandomizedSet2:
     def __init__(self):
         self.value_list = list()
         self.value_to_index_of_value_in_value_list_dict = dict()
+
+    def insert(self, val: int) -> bool:
+        if val not in self.value_to_index_of_value_in_value_list_dict:
+            self.value_list.append(val)
+            self.value_to_index_of_value_in_value_list_dict[val] = self.value_list.index(val)
+            return True
+        return False
