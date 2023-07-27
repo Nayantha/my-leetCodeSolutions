@@ -34,3 +34,16 @@ class RandomizedSet2:
             self.value_to_index_of_value_in_value_list_dict[val] = self.value_list.index(val)
             return True
         return False
+
+    def remove(self, val: int) -> bool:
+        if val in self.value_to_index_of_value_in_value_list_dict:
+            self.value_list[len(self.value_list)], self.value_list[self.value_to_index_of_value_in_value_list_dict[val]] \
+                = self.value_list[self.value_to_index_of_value_in_value_list_dict[val]], self.value_list[
+                len(self.value_list)]
+            self.value_list.pop()
+            self.value_to_index_of_value_in_value_list_dict[
+                self.value_list[self.value_to_index_of_value_in_value_list_dict[val]]] = self.value_list.index(
+                self.value_to_index_of_value_in_value_list_dict[val])
+            self.value_to_index_of_value_in_value_list_dict.
+            return True
+        return False
