@@ -24,3 +24,6 @@ class RandomizedSet:
 
 
 class RandomizedSet2:
+    def __init__(self):
+        self.value_list = list()
+        self.value_to_index_of_value_in_value_list_dict = dict()
