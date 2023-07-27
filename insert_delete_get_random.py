@@ -2,7 +2,7 @@
 class RandomizedSet:
 
     def __init__(self):
-        ...
+        self.randomized_set = set()
 
     def insert(self, val: int) -> bool:
         ...
