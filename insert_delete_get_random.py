@@ -49,3 +49,6 @@ class RandomizedSet2:
             del self.num_map[val]
             return True
         return False
+
+    def get_random(self) -> int:
+        return random.choice(self.num_list)
