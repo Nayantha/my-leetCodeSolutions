@@ -11,7 +11,10 @@ class RandomizedSet:
         return True
 
     def remove(self, val: int) -> bool:
-        ...
+        if val in self.randomized_set:
+            self.randomized_set.remove(val)
+            return True
+        return False
 
     def get_random(self) -> int:
         ...
