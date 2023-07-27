@@ -30,8 +30,10 @@ class RandomizedSet2:
 
     def insert(self, val: int) -> bool:
         if val not in self.num_map:
-            self.num_map[val] = len(self.num_list)
             self.num_list.append(val)
+            self.num_map[val] = self.num_list.index(val)
+            # self.num_list.append(val)
+            # self.num_map[val] = self.num_list.index(val)
             return True
         return False
 
@@ -44,6 +46,6 @@ class RandomizedSet2:
             self.num_map[
                 self.num_list[self.num_map[val]]] = self.num_list.index(
                 self.num_map[val])
-            self.num_map.
+            # self.num_map.
             return True
         return False
