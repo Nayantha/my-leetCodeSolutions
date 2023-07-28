@@ -1,11 +1,14 @@
 # https://leetcode.com/problems/product-of-array-except-self/
-import numpy as np
 
 
 def product_except_self(nums: list[int]) -> list[int]:
-    product_list = []
-    for index, current_num in enumerate(nums):
-        nums_with_out_current_index_item = nums.copy()
-        del nums_with_out_current_index_item[index]
-        product_list.append(np.product(np.array(nums_with_out_current_index_item)))
+    product_list = [1] * (len(nums))
+    prefix = 1
+    for i in range(len(nums)):
+        product_list[i] = prefix
+        prefix *= nums[i]
+    postfix = 1
+    for i in range(len(nums) - 1, -1, -1):
+        product_list[i] *= postfix
+        postfix *= nums[i]
     return product_list
