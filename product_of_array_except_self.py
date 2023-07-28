@@ -5,11 +5,7 @@ import numpy as np
 def product_except_self(nums: list[int]) -> list[int]:
     product_list = []
     for index, current_num in enumerate(nums):
-        product_list.append(
-            np.product(
-                np.array(
-                    [num for num in nums if nums.index(num) != index and num != current_num]
-                )
-            )
-        )
+        nums_with_out_current_index_item = nums.copy()
+        del nums_with_out_current_index_item[index]
+        product_list.append(np.product(np.array(nums_with_out_current_index_item)))
     return product_list
