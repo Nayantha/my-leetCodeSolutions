@@ -8,4 +8,4 @@ from candy import candy
     ([1, 2, 2], 4)
 ])
 def test_candy(ratings: list[int], expected: int):
-    candy(ratings)
+    assert candy(ratings) == expected
