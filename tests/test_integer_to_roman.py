@@ -15,4 +15,4 @@ from integer_to_roman import int_to_roman
     (900, "CM")
 ])
 def test_int_to_roman(num: int, expected: str):
-    int_to_roman(num)
+    assert int_to_roman(num) == expected
