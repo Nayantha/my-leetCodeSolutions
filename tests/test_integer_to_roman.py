@@ -1,6 +1,6 @@
 import pytest
 
-from integer_to_roman import int_to_roman
+from integer_to_roman import int_to_roman, int_to_roman_ii
 
 
 @pytest.mark.parametrize("num, expected", [
@@ -16,3 +16,4 @@ from integer_to_roman import int_to_roman
 ])
 def test_int_to_roman(num: int, expected: str):
     assert int_to_roman(num) == expected
+    assert int_to_roman_ii(num) == expected
