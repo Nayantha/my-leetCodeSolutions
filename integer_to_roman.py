@@ -27,4 +27,24 @@ def int_to_roman(num: int) -> str:
         result_str = result_str.replace("IIII", "IV")
     if "VIV" in result_str:
         result_str = result_str.replace("VIV", "IX")
+    if "XXXIXI" in result_str:
+        result_str = result_str.replace("XXXIXI", "XL")
+    if "LXXXIXI" in result_str:
+        result_str = result_str.replace("LXXXIXI", "XC")
+    if "LXL" in result_str:
+        result_str = result_str.replace("LXL", "XC")
+    if "LXXXX" in result_str:
+        result_str = result_str.replace("LXXXX", "XC")
+    if "CCCXCIXI" in result_str:
+        result_str = result_str.replace("CCCXCIXI", "CD")
+    if "CCCLXXL" in result_str:
+        result_str = result_str.replace("CCCLXXL", "CD")
+    if "DCCCXCIXI" in result_str:
+        result_str = result_str.replace("DCCCXCIXI", "CM")
+    if "DCCCLXXL" in result_str:
+        result_str = result_str.replace("DCCCLXXL", "CM")
+    if "DCD" in result_str:
+        result_str = result_str.replace("DCD", "CM")
+    if "DCCCC" in result_str:
+        result_str = result_str.replace("DCCCC", "CM")
     return result_str
