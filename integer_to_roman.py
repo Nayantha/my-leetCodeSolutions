@@ -41,4 +41,8 @@ def int_to_roman(num: int) -> str:
         else:
             num -= 1
             result_str += "I"
+    if "IIII" in result_str:
+        result_str = result_str.replace("IIII", "IV")
+    if "VIV" in result_str:
+        result_str = result_str.replace("VIV", "IX")
     return result_str
