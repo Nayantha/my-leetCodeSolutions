@@ -2,22 +2,22 @@
 def int_to_roman(num: int) -> str:
     result_str = ""
     while num > 0:
-        if num < 1000:
+        if num > 1000:
             num -= 1000
             result_str += "M"
-        elif num < 500:
+        elif num > 500:
             num -= 500
             result_str += "D"
-        elif num < 100:
+        elif num > 100:
             num -= 100
             result_str += "C"
-        elif num < 50:
+        elif num > 50:
             num -= 50
             result_str += "L"
-        elif num < 10:
+        elif num > 10:
             num -= 10
             result_str += "X"
-        elif num < 5:
+        elif num > 5:
             num -= 5
             result_str += "V"
         else:
