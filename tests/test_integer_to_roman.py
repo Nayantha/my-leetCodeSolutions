@@ -8,6 +8,11 @@ from integer_to_roman import int_to_roman
     (58, "LVIII"),
     (1994, "MCMXCIV"),
     (4, "IV"),
+    (9, "IX"),
+    (40, "XL"),
+    (90, "XC"),
+    (400, "CD"),
+    (900, "CM")
 ])
 def test_int_to_roman(num: int, expected: str):
     int_to_roman(num)
