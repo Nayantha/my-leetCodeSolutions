@@ -9,4 +9,4 @@ from integer_to_roman import int_to_roman
     (1994, "MCMXCIV")
 ])
 def test_int_to_roman(nums: int, expected: str):
-    int_to_roman(num)
+    int_to_roman(nums)
