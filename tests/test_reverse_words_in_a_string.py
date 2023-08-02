@@ -1,6 +1,6 @@
 import pytest
 
-from reverse_words_in_a_string import reverse_words
+from reverse_words_in_a_string import reverse_words, reverse_words_ii
 
 
 @pytest.mark.parametrize("s, expected", [
@@ -10,3 +10,4 @@ from reverse_words_in_a_string import reverse_words
 ])
 def test_reverse_words(s: str, expected: str):
     assert reverse_words(s) == expected
+    assert reverse_words_ii(s) == expected
