@@ -8,8 +8,11 @@ def reverse_words_ii(s: str) -> str:
     word = ""
     for letter in s:
         if letter == " ":
-            if not word:
+            if word:
                 res.append(word)
             word = ""
-        word += letter
+        else:
+            word += letter
+    if word:
+        res.append(word)
     return " ".join(res[::-1])
