@@ -1,5 +1,10 @@
 # https://leetcode.com/problems/zigzag-conversion/?envType=study-plan-v2&envId=top-interview-150
 def convert(s: str, num_rows: int) -> str:
+    """
+        :type s: str
+        :type num_rows: int
+        :rtype: str
+        """
     if num_rows == 1:
         return s
     zigzag_str = ""
