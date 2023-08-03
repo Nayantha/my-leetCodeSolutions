@@ -2,3 +2,11 @@
 def convert(s: str, num_rows: int) -> str:
     if num_rows:
         return s
+    zigzag_str = s[0]
+    for row in range(num_rows):
+        increment = 2 * (num_rows - 1)
+        for i in range(row, len(s), increment):
+            zigzag_str += s[i]
+            if 0 < row < num_rows - 1 and i + increment - 2 * row < len(s):
+                zigzag_str += s[i + increment - 2 * row]
+    return zigzag_str
