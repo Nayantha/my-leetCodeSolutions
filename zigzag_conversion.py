@@ -2,7 +2,7 @@
 def convert(s: str, num_rows: int) -> str:
     if num_rows:
         return s
-    zigzag_str = s[0]
+    zigzag_str = ""
     for row in range(num_rows):
         increment = 2 * (num_rows - 1)
         for i in range(row, len(s), increment):
