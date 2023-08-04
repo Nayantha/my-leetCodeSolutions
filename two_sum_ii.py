@@ -15,4 +15,4 @@ def two_sum_ii(numbers: list[int], target: int) -> list[int]:
         elif numbers[l] + numbers[r] > target:
             r -= 1
         else:
-            l -= 1
+            l += 1
