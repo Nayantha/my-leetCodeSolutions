@@ -4,3 +4,7 @@ def two_sum(numbers: list[int], target: int) -> list[int]:
         rest = target - numbers[i]
         if rest in numbers[i:]:
             return [i + 1, numbers.index(rest, i + 1) + 1]
+
+
+def two_sum_ii(numbers: list[int], target: int) -> list[int]:
+    ...
