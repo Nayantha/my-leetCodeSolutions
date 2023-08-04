@@ -1,6 +1,6 @@
 import pytest
 
-from two_sum_ii import two_sum
+from two_sum_ii import two_sum, two_sum_ii
 
 
 @pytest.mark.parametrize("numbers, target, expected", [
@@ -10,3 +10,4 @@ from two_sum_ii import two_sum
 ])
 def test_two_sum(numbers: list[int], target: int, expected: list[int]):
     assert two_sum(numbers, target) == expected
+    assert two_sum_ii(numbers, target) == expected
