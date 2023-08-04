@@ -2,7 +2,7 @@
 def two_sum(numbers: list[int], target: int) -> list[int]:
     for i in range(len(numbers)):
         rest = target - numbers[i]
-        if rest in numbers[i:]:
+        if rest in numbers[i + 1:]:
             return [i + 1, numbers.index(rest, i + 1) + 1]
 
 
