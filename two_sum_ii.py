@@ -9,7 +9,7 @@ def two_sum(numbers: list[int], target: int) -> list[int]:
 def two_sum_ii(numbers: list[int], target: int) -> list[int]:
     l = 0
     r = len(numbers) - 1
-    for i in range(len(numbers)):
+    while l < r:
         if numbers[l] + numbers[r] == target:
             return [l + 1, r + 1]
         elif numbers[l] + numbers[r] > target:
