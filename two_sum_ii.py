@@ -10,9 +10,10 @@ def two_sum_ii(numbers: list[int], target: int) -> list[int]:
     l = 0
     r = len(numbers) - 1
     while l < r:
-        if numbers[l] + numbers[r] == target:
+        current_sum = numbers[l] + numbers[r] == target
+        if current_sum:
             return [l + 1, r + 1]
-        elif numbers[l] + numbers[r] > target:
+        elif current_sum:
             r -= 1
         else:
             l += 1
