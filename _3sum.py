@@ -19,6 +19,7 @@ def three_sum_ii(nums: list[int]) -> list[list[int]]:
     for i in nums:
         for j in nums[i + 1:]:
             for k in nums[j + 1:]:
-                if i + j + k == 0:
-                    result.append([i, j, k])
+                triplet = sorted([i, j, k])
+                if sum(triplet) == 0 and triplet not in result:
+                    result.append(triplet)
     return result
