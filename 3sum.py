@@ -1,3 +1,3 @@
 # https://leetcode.com/problems/3sum/
-def three_sum(self, nums: list[int]) -> list[list[int]]:
+def three_sum(nums: list[int]) -> list[list[int]]:
     ...
