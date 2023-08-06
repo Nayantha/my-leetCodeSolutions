@@ -17,6 +17,6 @@ def test_three_sum(nums: list[int], expected: list[list[int]]):
     ([0, 1, 1], []),
     ([0, 0, 0], [[0, 0, 0]])
 ])
-def test_three_sum(nums: list[int], expected: list[list[int]]):
+def test_three_sum_ii(nums: list[int], expected: list[list[int]]):
     for output in three_sum_ii(nums):
         assert output in expected
