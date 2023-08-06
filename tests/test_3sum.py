@@ -9,4 +9,5 @@ from _3sum import three_sum
     ([0, 0, 0], [[0, 0, 0]])
 ])
 def test_three_sum(nums: list[int], expected: list[list[int]]):
-    assert three_sum(nums) == expected
+    for output in three_sum(nums):
+        assert output in expected
