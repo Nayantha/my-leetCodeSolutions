@@ -23,6 +23,7 @@ def three_sum_ii(nums: list[int]) -> list[list[int]]:
                     result.append(triplet)
     return result
 
+
 def three_sum_iii(nums: list[int]) -> list[list[int]]:
     result = []
     nums = list(set(sorted(nums)))
@@ -32,4 +33,8 @@ def three_sum_iii(nums: list[int]) -> list[list[int]]:
             triplet = sorted([nums[i], nums[l], nums[r]])
             if sum(triplet) == 0 and triplet not in result:
                 result.append(triplet)
+            elif sum(triplet) > 0:
+                r -= 1
+            else:
+                l += 1
     return result
