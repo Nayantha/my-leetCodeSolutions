@@ -10,3 +10,15 @@ def three_sum(nums: list[int]) -> list[list[int]]:
             if triplet not in result:
                 result.append(triplet)
     return result
+
+
+def three_sum_ii(nums: list[int]) -> list[list[int]]:
+    result = []
+    nums.sort()
+    nums = set(nums)
+    for i in nums:
+        for j in nums[i + 1:]:
+            for k in nums[j + 1:]:
+                if i + j + k == 0:
+                    result.append([i, j, k])
+    return result
