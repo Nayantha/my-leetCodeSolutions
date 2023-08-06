@@ -15,7 +15,7 @@ def three_sum(nums: list[int]) -> list[list[int]]:
 def three_sum_ii(nums: list[int]) -> list[list[int]]:
     result = []
     nums.sort()
-    nums = set(nums)
+    nums = list(set(nums))
     for i in nums:
         for j in nums[i + 1:]:
             for k in nums[j + 1:]:
