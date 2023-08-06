@@ -1,6 +1,6 @@
 import pytest
 
-from _3sum import three_sum
+from _3sum import three_sum, three_sum_ii
 
 
 @pytest.mark.parametrize("nums, expected", [
@@ -10,4 +10,7 @@ from _3sum import three_sum
 ])
 def test_three_sum(nums: list[int], expected: list[list[int]]):
     for output in three_sum(nums):
+        assert output in expected
+
+    for output in three_sum_ii(nums):
         assert output in expected
