@@ -1,19 +1,10 @@
 # https://leetcode.com/problems/minimum-size-subarray-sum/?envType=study-plan-v2&envId=top-interview-150
 def min_sub_array_len(target: int, nums: list[int]) -> int:
-    if target > sum(nums):
-        return 0
-    for num in nums:
-        if target <= num:
-            return 1
-    l, r = 0, 0
-    window_size = 0
-    while l < len(nums) and r < len(nums):
-        if sum(nums[l:r]) < target:
-            r += 1
-        else:
-            if not window_size:
-                window_size = r - l
-            else:
-                window_size = min(window_size, r - l)
-                l += 1
-    return window_size
+    l, total, res = 0, 0, float("inf")
+    for r in range(len(nums)):
+        total += nums[r]
+        while total >= target:
+            res = min(res, r - l + 1)
+            total -= nums[l]
+            l += 1
+    return 0 if res == float("inf") else res
