@@ -11,12 +11,17 @@ def length_of_longest_substring(s: str) -> int:
 
 
 def length_of_longest_substring_ii(s: str) -> int:
-    l, r = 0, 1
+    if not s:
+        return 0
+    if len(s) == 1:
+        return 1
+    l, r, max_len = 0, 1, 0
     res_str = [s[l]]
     while l < r < len(s):
         if s[r] in res_str:
+            res_str = res_str[res_str.index(s[r]) + 1:]
             l = r
-            res_str = [s[l]]
         res_str.append(s[r])
         r += 1
-    return len(res_str)
+        max_len = max(max_len, len(res_str))
+    return max_len
