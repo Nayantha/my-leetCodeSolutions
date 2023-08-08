@@ -25,3 +25,16 @@ def length_of_longest_substring_ii(s: str) -> int:
         r += 1
         max_len = max(max_len, len(res_str))
     return max_len
+
+
+def length_of_longest_substring_iii(s: str) -> int:
+    char_set = set()
+    l = 0
+    res = 0
+    for r in range(len(s)):
+        while s[r] in char_set:
+            char_set.remove(s[l])
+            l += 1
+        char_set.add(s[r])
+        res = max(res, r - l + 1)
+    return res
