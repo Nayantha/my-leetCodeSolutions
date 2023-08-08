@@ -8,3 +8,14 @@ def length_of_longest_substring(s: str) -> int:
         res_str.append(ele)
         max_len = max(max_len, len(res_str))
     return max_len
+
+
+def length_of_longest_substring_ii(s: str) -> int:
+    l, r = 0, 1
+    res_str = [s[l]]
+    while l < r < len(s):
+        if s[r] in res_str:
+            l = r
+        res_str.append(s[r])
+        r += 1
+    return len(res_str)
