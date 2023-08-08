@@ -16,6 +16,7 @@ def length_of_longest_substring_ii(s: str) -> int:
     while l < r < len(s):
         if s[r] in res_str:
             l = r
+            res_str = [s[l]]
         res_str.append(s[r])
         r += 1
     return len(res_str)
