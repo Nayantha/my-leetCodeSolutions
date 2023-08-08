@@ -1,5 +1,7 @@
 import pytest
 
+from longest_substring_without_repeating_characters import length_of_longest_substring
+
 
 @pytest.mark.parametrize("s, expected", [
     ("abcabcbb", 3),
@@ -7,4 +9,4 @@ import pytest
     ("pwwkew", 3)
 ])
 def test_length_of_longest_substring(s: str, expected: int):
-    assert False
+    assert length_of_longest_substring(s) == expected
