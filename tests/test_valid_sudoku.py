@@ -25,3 +25,4 @@ from valid_sudoku import is_valid_sudoku
 ])
 def test_is_valid_sudoku(board: list[list[int | str]], expected: bool):
     is_valid_sudoku(board)
+    assert is_valid_sudoku(board) == expected
