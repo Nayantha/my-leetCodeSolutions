@@ -3,7 +3,7 @@ def spiral_order(matrix: list[list[int]]) -> list[int]:
     res: list[int] = []
     left, right = 0, len(matrix[0])
     top, bottom = 0, len(matrix)
-    while top < bottom or left < right:
+    while top < bottom and left < right:
         for i in range(left, right):
             res.append(matrix[top][i])
         top += 1
