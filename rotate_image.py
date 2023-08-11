@@ -1,4 +1,8 @@
 # https://leetcode.com/problems/rotate-image/?envType=study-plan-v2&envId=top-interview-150
+def rotate(matrix: list[list[int]]) -> None:
+    ...
+
+
 def rotate_ii(matrix: list[list[int]]) -> None:
     left, right = 0, len(matrix) - 1
     top, bottom = 0, len(matrix[0]) - 1
