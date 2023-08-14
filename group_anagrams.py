@@ -1,3 +1,3 @@
 # https://leetcode.com/problems/group-anagrams/?envType=study-plan-v2&envId=top-interview-150
-def group_anagrams(self, strs: list[str]) -> list[list[str]]:
+def group_anagrams(strs: list[str]) -> list[list[str]]:
     ...
