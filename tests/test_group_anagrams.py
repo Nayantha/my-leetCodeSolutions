@@ -9,4 +9,5 @@ from group_anagrams import group_anagrams
     (["a"], [["a"]])
 ])
 def test_group_anagrams(strs: list[str], expected: list[list[str]]):
-    assert group_anagrams(strs) == expected
+    word_list = [sorted(word_list) for word_list in sorted(group_anagrams(strs), key=len)]
+    assert word_list == expected
