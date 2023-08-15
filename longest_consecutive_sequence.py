@@ -1,2 +1,3 @@
 # https://leetcode.com/problems/longest-consecutive-sequence/
-def longestConsecutive(self, nums: List[int]) -> int:
+def longest_consecutive(nums: list[int]) -> int:
+    ...
