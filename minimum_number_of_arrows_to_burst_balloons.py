@@ -12,7 +12,7 @@ def find_min_arrow_shots(points: list[list[int]]) -> int:
     return len(res)
 
 
-def find_min_arrow_shots_with_limit(points: list[list[int]], limit: int) -> int:
+def find_min_arrow_shots_with_limit(points: list[list[int]], limit: int = 2) -> int:
     points.sort(key=lambda x: x[1])
     res = [points[0] + [1]]
     for start, end in points[1:]:
