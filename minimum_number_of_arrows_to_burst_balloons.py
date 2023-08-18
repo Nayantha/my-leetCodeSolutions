@@ -18,7 +18,7 @@ def find_min_arrow_shots(points: list[list[int]]) -> int:
 
 def find_min_arrow_shots_with_limit(points: list[list[int]], limit: int = 2) -> int:
     """
-    Burst limited number of balloons
+    Minimum number of arrows needed to burst all balloons
     :param points: the points of X-axis the balloons spread across
     :param limit: the number of balloons an arrow is able to burst
     :return: the minimum arrows need to burst all balloons
