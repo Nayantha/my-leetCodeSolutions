@@ -9,4 +9,4 @@ from minimum_number_of_arrows_to_burst_balloons import find_min_arrow_shots
     ([[1, 2], [2, 3], [3, 4], [4, 5]], 2)
 ])
 def test_find_min_arrow_shots(points: list[list[int]], expected: int):
-    assert find_min_arrow_shots(points)
+    assert find_min_arrow_shots(points) == expected
