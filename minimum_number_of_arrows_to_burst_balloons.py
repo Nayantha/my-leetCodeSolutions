@@ -1,4 +1,9 @@
 def find_min_arrow_shots(points: list[list[int]]) -> int:
+    """
+    Minimum number of arrows needed to burst all balloons
+    :param points: the points of X-axis the balloons spread across
+    :return: the minimum arrows need to burst all balloons
+    """
     points.sort(key=lambda x: x[1])
     res = [points[0]]
     for start, end in points[1:]:
