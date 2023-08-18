@@ -1,1 +1,2 @@
-def findMinArrowShots(self, points: List[List[int]]) -> int:
+def find_min_arrow_shots(points: list[list[int]]) -> int:
+    ...
