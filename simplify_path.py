@@ -1,5 +1,13 @@
 # https://leetcode.com/problems/simplify-path/
 def simplify_path(path: str) -> str:
+    """
+    Simplify the path.
+    Replace '//' with '/'.
+    Ignore './'.
+    Remove previous folder when encounter '../'.
+    :param path: the string containing the complex path.
+    :return: Simplified path.
+    """
     path_stack = []
     folder_names = path.split("/")
     for folder_name in folder_names:
