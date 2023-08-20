@@ -39,4 +39,8 @@ class MinStack:
         return self.stack[-1]
 
     def get_min(self) -> int:
+        """
+        Return the minimum value of the stack.
+        :return: Minimum value of the stack.
+        """
         return self.min_value_stack[-1]
