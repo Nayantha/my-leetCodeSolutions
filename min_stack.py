@@ -8,6 +8,8 @@ class MinStack:
     def __init__(self):
         """
         Initialize the min stack.
+        Stack keeps track of the values that pushes inside the stack.
+        The other stack keeps track of the minimum values of each pop and push.
         """
         self.stack = []
         self.min_value_stack = []
