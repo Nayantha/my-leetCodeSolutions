@@ -15,6 +15,10 @@ class MinStack:
         self.min_value_stack = []
 
     def push(self, val: int) -> None:
+        """
+        Push a value in to the stack.
+        :param val: the value that need to be push in to the stack
+        """
         self.stack.append(val)
         val = min(val, self.min_value_stack[-1] if self.min_value_stack else val)
         self.min_value_stack.append(val)
