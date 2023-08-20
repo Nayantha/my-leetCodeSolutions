@@ -11,7 +11,7 @@ class MinStack:
         self.stack[-1] = val
 
     def pop(self) -> None:
-        ...
+        self.stack.pop()
 
     def top(self) -> int:
         ...
