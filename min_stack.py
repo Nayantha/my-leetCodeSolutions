@@ -24,6 +24,9 @@ class MinStack:
         self.min_value_stack.append(val)
 
     def pop(self) -> None:
+        """
+        Remove the top value (the last values of the arrays).
+        """
         self.stack.pop()
         self.min_value_stack.pop()
 
