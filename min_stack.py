@@ -1,5 +1,9 @@
 # https://leetcode.com/problems/min-stack/
 class MinStack:
+    """
+    Extension of the stack data structure.
+    Apart from the inherited methods, this class is able to return the minimum value reside in the stack.
+    """
 
     def __init__(self):
         self.stack = []
