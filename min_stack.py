@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/min-stack/
 class MinStack:
+    min_val: int | None = None
 
     def __init__(self):
         ...
