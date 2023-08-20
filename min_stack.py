@@ -31,6 +31,11 @@ class MinStack:
         self.min_value_stack.pop()
 
     def top(self) -> int:
+        """
+        Output the top value of the stack.
+        In this implementation, the last value of the array stack.
+        :return: Top value of the stack.
+        """
         return self.stack[-1]
 
     def get_min(self) -> int:
