@@ -6,6 +6,9 @@ class MinStack:
     """
 
     def __init__(self):
+        """
+        Initialize the min stack.
+        """
         self.stack = []
         self.min_value_stack = []
 
