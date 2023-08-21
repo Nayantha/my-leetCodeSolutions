@@ -14,4 +14,4 @@ def eval_rpn(tokens: list[str]) -> int:
             number_stack.append(int(num2 / num1))
         else:
             number_stack.append(int(token))
-    return number_stack.pop()
+    return number_stack[0]
