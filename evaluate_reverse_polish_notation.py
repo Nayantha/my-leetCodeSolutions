@@ -2,7 +2,7 @@
 def eval_rpn(tokens: list[str]) -> int:
     number_stack: list[int] = []
     for token in tokens:
-        if token.isnumeric():
+        if token.lstrip("-").isnumeric():
             number_stack.append(int(token))
             continue
         num1 = number_stack.pop()
@@ -14,5 +14,5 @@ def eval_rpn(tokens: list[str]) -> int:
         elif token == "*":
             number_stack.append(num1 * num2)
         elif token == "/":
-            number_stack.append(num2 // num1)
+            number_stack.append(int(num2 / num1))
     return number_stack.pop()
