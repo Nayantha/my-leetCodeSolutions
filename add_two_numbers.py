@@ -9,8 +9,6 @@ class ListNode:
 
 
 def add_two_numbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-    result_list = l1
-    remainder = 0
     l1_str = ""
     while l1:
         l1_str += str(l1.val)
