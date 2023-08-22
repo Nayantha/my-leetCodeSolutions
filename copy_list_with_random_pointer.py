@@ -1,5 +1,4 @@
 # https://leetcode.com/problems/copy-list-with-random-pointer/
-import random
 from typing import Optional
 
 
@@ -11,13 +10,16 @@ class Node:
 
 
 def copy_random_list(self, head: 'Optional[Node]') -> 'Optional[Node]':
-    list_values: list[Node] = []
-    while head:
-        list_values.append(head)
-        head = head.next_node
-    new_head = list_values[0]
-    for node in list_values.copy():
-        rand_node = random.choices(list_values)
-        node.random = rand_node
-        list_values.remove(rand_node)
-    return new_head
+    copy_of_the_list = {None: Node}  # old_node: new_node
+    cur = head
+    while cur:
+        new_node = Node(cur.val)
+        copy_of_the_list[cur] = new_node
+        cur = cur.next_node
+    cur = head
+    while cur:
+        node = copy_of_the_list[cur]
+        node.next_node = copy_of_the_list[cur.next_node]
+        node.random = copy_of_the_list[cur.random]
+        cur = cur.next_node
+    return copy_of_the_list[head]
