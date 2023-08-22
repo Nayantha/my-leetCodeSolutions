@@ -18,3 +18,7 @@ def test_add_two_numbers():
     expected = expected_val_list[0]
 
     output = add_two_numbers(l1, l2)
+
+    while expected and output:
+        assert expected.val == output.val
+       
