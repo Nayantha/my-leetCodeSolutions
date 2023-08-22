@@ -10,6 +10,13 @@ class Node:
 
 
 def copy_random_list(self, head: 'Optional[Node]') -> 'Optional[Node]':
+    """
+    Copy the given lined list in to new memory places
+    and exchange the next and random node point to the new memory places.
+    :param self:
+    :param head:
+    :return:
+    """
     copy_of_the_list = {None: Node}  # old_node: new_node
     cur = head
     while cur:
