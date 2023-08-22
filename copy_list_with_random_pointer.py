@@ -4,10 +4,10 @@ from typing import Optional
 
 
 class Node:
-    def __init__(self, x: int, next_node: 'Node' = None, random: 'Node' = None):
+    def __init__(self, x: int, next_node: 'Node' = None, random_node: 'Node' = None):
         self.val = int(x)
         self.next_node = next_node
-        self.random = random
+        self.random = random_node
 
 
 def copy_random_list(self, head: 'Optional[Node]') -> 'Optional[Node]':
