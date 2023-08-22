@@ -9,13 +9,14 @@ class ListNode:
 
 
 def add_two_numbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    result_list = l1
     remainder = 0
     while l1 and l2:
         addition = l1.val + l2.val + remainder
-        l1.val = addition % 10
+        l1 = ListNode(addition % 10, l1.next)
         remainder = int(addition / 10)
         l1 = l1.next
         l2 = l2.next
     if l2 and not l1:
         l1 = l2
-    return l1
+    return result_list
