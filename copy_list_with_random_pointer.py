@@ -13,8 +13,8 @@ def copy_random_list(head: 'Optional[Node]') -> 'Optional[Node]':
     """
     Copy the given lined list in to new memory places
     and exchange the next and random node point to the new memory places.
-    :param head:
-    :return:
+    :param head: The head of the linked list that needed to be copied.
+    :return: The head of the linked list with all the new memory locations.
     """
     copy_of_the_list = {None: Node}  # old_node: new_node
     cur = head
