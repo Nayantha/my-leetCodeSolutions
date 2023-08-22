@@ -21,4 +21,5 @@ def test_add_two_numbers():
 
     while expected and output:
         assert expected.val == output.val
-       
+        expected = expected.next
+        output = output.next
