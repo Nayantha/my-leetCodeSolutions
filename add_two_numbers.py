@@ -8,7 +8,7 @@ class ListNode:
         self.next = next
 
 
-def add_two_numbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+def add_two_numbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
     remainder = 0
     while l1 and l2:
         l1 = l1.val + l2.val
