@@ -5,6 +5,14 @@ from add_two_numbers import ListNode
 
 
 def reverse_between(head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
+    """
+    Reverse the list from position left to position right and switch the pointers of position (left-1) to position right
+    and (right+1) to position left.
+    :param head: The head of the singly-linked list.
+    :param left: The starting index of the sub-list that needed to be reversed.
+    :param right: The ending index of the sub-list that needed to be reversed.
+    :return: The head of the new list; that is the list containing reversed sub-list
+    """
     dummy_node = ListNode(0, head)
     left_previous_pointer, curr = dummy_node, head
     for i in range(left - 1):
