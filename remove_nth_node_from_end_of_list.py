@@ -4,5 +4,5 @@ from typing import Optional
 from linked_list_cycle import ListNode
 
 
-def remove_nth_from_end(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+def remove_nth_from_end(head: Optional[ListNode], n: int) -> Optional[ListNode]:
     ...
