@@ -1,3 +1,5 @@
+from re
+
 import pytest
 
 from list_node import ListNode
@@ -8,5 +10,10 @@ from list_node import ListNode
     ([1, 1, 1, 2, 3], [2, 3])
 ])
 def test_delete_duplicates(input_list: list[int], expected_list: list[int]):
-    list_values = [1, 2, 3, 3, 4, 4, 5]
-    head = ListNode(val=list_values[0])
+    input_list_head = ListNode(val=input_list[0])
+    expected_list_head = ListNode(val=expected_list[0])
+    assert input_list_head == expected_list_head
+    while input_list_head and expected_list_head:
+        assert input_list_head.val == expected_list_head.val
+        input_list_head = input_list_head.next
+        expected_list_head.next = expected_list_head.next
