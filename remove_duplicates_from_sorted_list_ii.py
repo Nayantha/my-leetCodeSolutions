@@ -4,5 +4,5 @@ from typing import Optional
 from list_node import ListNode
 
 
-def delete_duplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+def delete_duplicates(head: Optional[ListNode]) -> Optional[ListNode]:
     ...
