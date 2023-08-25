@@ -6,13 +6,13 @@ from list_node import ListNode
 
 def delete_duplicates(head: Optional[ListNode]) -> Optional[ListNode]:
     dummy = ListNode(next_node=head)
-    previous_node, current_node = dummy, head
-    while current_node:
-        if current_node.val == current_node.next.next.val:
-            while current_node.val == current_node.next.next.val:
-                current_node = current_node.next
-            current_node = current_node.next
-            previous_node.next = current_node
-        previous_node = current_node
-        current_node = current_node.next
+    previous_node = dummy
+    while head:
+        if head.next and head.val == head.next.val:
+            while head.next and head.val == head.next.val:
+                head = head.next
+            previous_node.next = head.next
+        else:
+            previous_node = previous_node.next
+        head = head.next
     return dummy.next
