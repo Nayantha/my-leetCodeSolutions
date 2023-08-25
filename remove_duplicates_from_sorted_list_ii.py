@@ -11,6 +11,7 @@ def delete_duplicates(head: Optional[ListNode]) -> Optional[ListNode]:
         if current_node.val == current_node.next.next.val:
             while current_node.val == current_node.next.next.val:
                 current_node = current_node.next
+            current_node = current_node.next
             previous_node.next = current_node
         previous_node = current_node
         current_node = current_node.next
