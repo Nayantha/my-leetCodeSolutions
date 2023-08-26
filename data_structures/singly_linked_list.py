@@ -13,3 +13,12 @@ def insert(head_node: Optional[ListNode], value: int):
             current_node = current_node.next
         current_node.next = new_node
     return head_node
+
+
+def array_to_list(array: list[int], n: int = None):
+    if not n:
+        n = len(array)
+    head: Optional[ListNode] = None
+    for i in range(n - 1, -1, -1):
+        head = insert(head, array[i])
+    return head
