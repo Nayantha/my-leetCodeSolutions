@@ -1,6 +1,6 @@
 import pytest
 
-from list_node import ListNode
+from data_structures.list_node import ListNode
 from remove_duplicates_from_sorted_list_ii import delete_duplicates
 
 

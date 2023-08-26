@@ -1,6 +1,6 @@
 import pytest
 
-from list_node import ListNode
+from data_structures.list_node import ListNode
 from rotate_list import rotate_right
 
 
