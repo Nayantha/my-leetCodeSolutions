@@ -5,7 +5,7 @@ from list_node import ListNode
 
 
 def delete_duplicates(head: Optional[ListNode]) -> Optional[ListNode]:
-    dummy = ListNode(next_node=head)
+    dummy = ListNode(next=head)
     previous_node = dummy
     while head:
         if head.next and head.val == head.next.val:
