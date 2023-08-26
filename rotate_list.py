@@ -12,7 +12,7 @@ def rotate_right(head: Optional[ListNode], k: int) -> Optional[ListNode]:
         while current_node.next:
             previous_node = current_node
             current_node = current_node.next
-        previous_node.next = None
         current_node.next = dummy.next
         dummy.next = current_node
+        previous_node.next = None
     return dummy.next
