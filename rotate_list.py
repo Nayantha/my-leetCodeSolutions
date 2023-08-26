@@ -5,6 +5,9 @@ from data_structures.list_node import ListNode
 
 
 def rotate_right(head: Optional[ListNode], k: int) -> Optional[ListNode]:
+    if not head:
+        return head
+
     def find_length_of_list(head: Optional[ListNode]):
         length = 0
         while head:
