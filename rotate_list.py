@@ -7,7 +7,7 @@ from data_structures.list_node import ListNode
 def rotate_right(head: Optional[ListNode], k: int) -> Optional[ListNode]:
     if not head:
         return head
-    total_num_of_nodes, tail = 0, head
+    total_num_of_nodes, tail = 1, head
     while tail.next:
         total_num_of_nodes += 1
         tail = tail.next
