@@ -5,7 +5,7 @@ from list_node import ListNode
 
 
 def rotate_right(head: Optional[ListNode], k: int) -> Optional[ListNode]:
-    dummy = ListNode(next=head)
+    dummy = ListNode(next_node=head)
     for i in range(k):
         previous_node = dummy
         head = dummy.next

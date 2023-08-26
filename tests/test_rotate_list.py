@@ -9,8 +9,8 @@ from rotate_list import rotate_right
     ([0, 1, 2], 4, [2, 0, 1])
 ])
 def test_rotate_right(initial_list: list[int], number_of_rotations: int, rotated_list: list[int]):
-    output_list_head = rotate_right(ListNode(initial_list[0]), number_of_rotations)
-    rotated_list_head = ListNode(rotated_list[0])
+    output_list_head = rotate_right(ListNode(val=initial_list[0]), number_of_rotations)
+    rotated_list_head = ListNode(val=rotated_list[0])
     while rotated_list_head and output_list_head:
         assert rotated_list_head.val == output_list_head.val
         rotated_list_head = rotated_list_head.next
