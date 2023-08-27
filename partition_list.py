@@ -5,6 +5,13 @@ from data_structures.list_node import ListNode
 
 
 def partition(head: Optional[ListNode], x: int) -> Optional[ListNode]:
+    """
+    Given the head of a linked list and a value x,
+    partition it such that all nodes less than x come before nodes greater than or equal to x.
+    :param head: The head / first node of the linked list.
+    :param x: The value to partition the linked list by.
+    :return: Head of the partitioned linked list.
+    """
     left, right = ListNode(), ListNode()
     left_tail, right_tail = left, right
     while head:
