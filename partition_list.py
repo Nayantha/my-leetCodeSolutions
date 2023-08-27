@@ -1,2 +1,8 @@
 # https://leetcode.com/problems/partition-list/
-def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:
+from typing import Optional
+
+from data_structures.list_node import ListNode
+
+
+def partition(head: Optional[ListNode], x: int) -> Optional[ListNode]:
+    ...
