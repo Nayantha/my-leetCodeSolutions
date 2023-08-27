@@ -21,4 +21,14 @@ def partition(head: Optional[ListNode], x: int) -> Optional[ListNode]:
 
 
 def partition_ii(head: Optional[ListNode], x: int) -> Optional[ListNode]:
-    ...
+    dummy = ListNode(next_node=head)
+    current_node = head.next if head.next else head
+    left_list = head
+    while current_node.next:
+        if current_node.next.val < x:
+            node_to_remove: ListNode = current_node.next
+            current_node.next = node_to_remove.next
+            node_to_remove.next = left_list.next
+            left_list.next = node_to_remove
+        current_node = current_node.next
+    return dummy.next
