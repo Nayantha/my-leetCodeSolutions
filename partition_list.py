@@ -18,3 +18,7 @@ def partition(head: Optional[ListNode], x: int) -> Optional[ListNode]:
     left_tail.next = right.next
     right_tail.next = None
     return left.next
+
+
+def partition_ii(head: Optional[ListNode], x: int) -> Optional[ListNode]:
+    ...
