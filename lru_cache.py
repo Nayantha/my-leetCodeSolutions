@@ -63,7 +63,7 @@ class LRUCacheII:
         else:
             return -1
 
-    def push(self, key, value):
+    def put(self, key, value):
         if key in self.cache_map:
             self.cache_map.move_to_end(key)
         else:
