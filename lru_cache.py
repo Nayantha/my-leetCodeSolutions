@@ -28,6 +28,8 @@ class LRUCache:
 
     def get(self, key: int) -> int:
         if key in self.key_value_map_cache:
+            self.remove(self.key_value_map_cache[key])
+            self.insert(self.key_value_map_cache[key])
             return self.key_value_map_cache[key].val
         return -1
 
