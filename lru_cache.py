@@ -1,4 +1,15 @@
 # https://leetcode.com/problems/lru-cache/
+from typing import Optional
+
+
+class Node:
+    def __int__(self, value: int, key: int):
+        self.value: int = value
+        self.key: int = key
+        self.next: Optional[Node] = None
+        self.prev: Optional[Node] = None
+
+
 class LRUCache:
 
     def __init__(self, capacity: int):
