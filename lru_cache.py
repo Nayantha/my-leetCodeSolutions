@@ -6,7 +6,8 @@ class LRUCache:
         self.capacity = capacity
 
     def get(self, key: int) -> int:
-        return -1
+        value = self.map.get(key)
+        return value if value else -1
 
     def put(self, key: int, value: int) -> None:
         self.map[key] = value
