@@ -23,8 +23,7 @@ class LRUCache:
     def get(self, key: int) -> int:
         if key in self.key_value_map_cache:
             return self.key_value_map_cache[key].val
-        else:
-            return -1
+        return -1
 
     def put(self, key: int, value: int) -> None:
         if len(self.key_value_map_cache) >= self.capacity:
