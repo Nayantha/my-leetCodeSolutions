@@ -8,7 +8,7 @@ class LRUCache:
 
     def get(self, key: int) -> int:
         value = self.map.get(key)
-        return value if value else -1
+        return value if value != None else -1
 
     def put(self, key: int, value: int) -> None:
         if len(self.map) >= self.capacity:
