@@ -3,7 +3,7 @@ from typing import Optional
 
 
 class Node:
-    def __int__(self, value: int, key: int):
+    def __int__(self, value: int = 0, key: int = 0):
         self.value: int = value
         self.key: int = key
         self.next: Optional[Node] = None
