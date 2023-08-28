@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/lru-cache/
+from collections import OrderedDict
 from typing import Optional
 
 
@@ -50,4 +51,7 @@ class LRUCache:
 
 
 class LRUCacheII:
-    ...
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.size = 0
+        self.cache_map = OrderedDict()
