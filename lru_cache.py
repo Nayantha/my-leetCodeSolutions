@@ -55,3 +55,10 @@ class LRUCacheII:
         self.capacity = capacity
         self.size = 0
         self.cache_map = OrderedDict()
+
+    def get(self, key):
+        if key in self.cache_map:
+            self.cache_map.move_to_end(key)
+            return self.cache_map[key]
+        else:
+            return -1
