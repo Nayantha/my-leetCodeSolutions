@@ -9,4 +9,4 @@ class LRUCache:
         return -1
 
     def put(self, key: int, value: int) -> None:
-        ...
+        self.map[key] = value
