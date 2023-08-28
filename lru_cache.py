@@ -21,11 +21,10 @@ class LRUCache:
         self.right.prev = self.left
 
     def get(self, key: int) -> int:
-        value = self.key_value_map_cache.get(key)
-        key_list = list(self.key_value_map_cache.keys())
-        key_list.remove(key)
-        self.evict_key = key_list[0]
-        return value if value != None else -1
+        if key in self.key_value_map_cache:
+            return self.key_value_map_cache[key].val
+        else:
+            return -1
 
     def put(self, key: int, value: int) -> None:
         if len(self.key_value_map_cache) >= self.capacity:
