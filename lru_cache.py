@@ -13,22 +13,22 @@ class Node:
 class LRUCache:
 
     def __init__(self, capacity: int):
-        self.map = {}
+        self.key_value_map_cache = {}
         self.capacity = capacity
         self.evict_key = 0
 
     def get(self, key: int) -> int:
-        value = self.map.get(key)
-        key_list = list(self.map.keys())
+        value = self.key_value_map_cache.get(key)
+        key_list = list(self.key_value_map_cache.keys())
         key_list.remove(key)
         self.evict_key = key_list[0]
         return value if value != None else -1
 
     def put(self, key: int, value: int) -> None:
-        if len(self.map) >= self.capacity:
-            del self.map[self.evict_key]
-            self.evict_key = list(self.map.keys())[0] if self.map.keys() else key
-            self.map[key] = value
+        if len(self.key_value_map_cache) >= self.capacity:
+            del self.key_value_map_cache[self.evict_key]
+            self.evict_key = list(self.key_value_map_cache.keys())[0] if self.key_value_map_cache.keys() else key
+            self.key_value_map_cache[key] = value
         else:
-            self.map[key] = value
-            self.evict_key = list(self.map.keys())[0] if self.map.keys() else key
+            self.key_value_map_cache[key] = value
+            self.evict_key = list(self.key_value_map_cache.keys())[0] if self.key_value_map_cache.keys() else key
