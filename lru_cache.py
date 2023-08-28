@@ -20,6 +20,12 @@ class LRUCache:
         self.left.next = self.right
         self.right.prev = self.left
 
+    def remove(self, node):
+        ...
+
+    def insert(self, node):
+        ...
+
     def get(self, key: int) -> int:
         if key in self.key_value_map_cache:
             return self.key_value_map_cache[key].val
