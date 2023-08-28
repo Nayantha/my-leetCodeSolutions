@@ -62,3 +62,15 @@ class LRUCacheII:
             return self.cache_map[key]
         else:
             return -1
+
+    def push(self, key, value):
+        if key in self.cache_map:
+            self.cache_map[key] = value
+            self.cache_map.move_to_end(key)
+        else:
+            if self.size < self.capacity:
+                self.size += 1
+                self.cache_map[key] = value
+            else:
+                self.cache_map.popitem(False)
+                self.cache_map[key] = value
