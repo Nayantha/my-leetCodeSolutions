@@ -10,4 +10,7 @@ class LRUCache:
         return value if value else -1
 
     def put(self, key: int, value: int) -> None:
+        key_list = self.map.keys()
+        if len(key_list) > 2:
+            del self.map[key_list[-1]]
         self.map[key] = value
