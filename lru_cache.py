@@ -47,3 +47,7 @@ class LRUCache:
             lru = self.left.next
             self.remove(lru)
             del self.key_value_map_cache[lru.key]
+
+
+class LRUCacheII:
+    ...
