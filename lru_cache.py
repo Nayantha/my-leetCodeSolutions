@@ -12,7 +12,7 @@ class LRUCache:
 
     def put(self, key: int, value: int) -> None:
         key_list = self.map.keys()
-        if len(key_list) > 2:
+        if len(key_list) >= self.capacity:
             del self.map[self.evict_key]
         self.map[key] = value
         self.evict_key = key
