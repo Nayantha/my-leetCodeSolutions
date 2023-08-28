@@ -14,5 +14,6 @@ class LRUCache:
         key_list = list(self.map.keys())
         if len(key_list) >= self.capacity:
             del self.map[self.evict_key]
+            key_list.remove(self.evict_key)
         self.evict_key = key_list[-1] if key_list else key
         self.map[key] = value
