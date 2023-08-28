@@ -17,6 +17,8 @@ class LRUCache:
         self.capacity = capacity
         self.left = Node()
         self.right = Node()
+        self.left.next = self.right
+        self.right.prev = self.left
 
     def get(self, key: int) -> int:
         value = self.key_value_map_cache.get(key)
