@@ -8,13 +8,16 @@ class LRUCache:
 
     def get(self, key: int) -> int:
         value = self.map.get(key)
+        key_list = list(self.map.keys())
+        key_list.remove(key)
+        self.evict_key = key_list[0]
         return value if value != None else -1
 
     def put(self, key: int, value: int) -> None:
         if len(self.map) >= self.capacity:
             del self.map[self.evict_key]
-            self.evict_key = list(self.map.keys())[-1] if self.map.keys() else key
+            self.evict_key = list(self.map.keys())[0] if self.map.keys() else key
             self.map[key] = value
         else:
             self.map[key] = value
-            self.evict_key = list(self.map.keys())[-1] if self.map.keys() else key
+            self.evict_key = list(self.map.keys())[0] if self.map.keys() else key
