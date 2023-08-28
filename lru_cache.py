@@ -15,8 +15,8 @@ class LRUCache:
     def __init__(self, capacity: int):
         self.key_value_map_cache = {}
         self.capacity = capacity
-        self.left = Node()
-        self.right = Node()
+        self.left = Node()  # least recently used
+        self.right = Node()  # most recently used
         self.left.next = self.right
         self.right.prev = self.left
 
