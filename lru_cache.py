@@ -4,6 +4,7 @@ class LRUCache:
     def __init__(self, capacity: int):
         self.map = {}
         self.capacity = capacity
+        self.evict_key = 0
 
     def get(self, key: int) -> int:
         value = self.map.get(key)
@@ -12,5 +13,6 @@ class LRUCache:
     def put(self, key: int, value: int) -> None:
         key_list = self.map.keys()
         if len(key_list) > 2:
-            del self.map[key_list[-1]]
+            del self.map[self.evict_key]
         self.map[key] = value
+        self.evict_key = key
