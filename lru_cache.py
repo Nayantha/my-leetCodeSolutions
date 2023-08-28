@@ -34,10 +34,6 @@ class LRUCache:
         return -1
 
     def put(self, key: int, value: int) -> None:
-        if len(self.key_value_map_cache) >= self.capacity:
-            del self.key_value_map_cache[self.evict_key]
-            self.evict_key = list(self.key_value_map_cache.keys())[0] if self.key_value_map_cache.keys() else key
-            self.key_value_map_cache[key] = value
-        else:
-            self.key_value_map_cache[key] = value
-            self.evict_key = list(self.key_value_map_cache.keys())[0] if self.key_value_map_cache.keys() else key
+        if key in self.key_value_map_cache:
+            self.remove(self.key_value_map_cache[key])
+        self.key_value_map_cache[key] = Node(value, key)
