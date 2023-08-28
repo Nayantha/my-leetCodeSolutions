@@ -38,3 +38,7 @@ class LRUCache:
             self.remove(self.key_value_map_cache[key])
         self.key_value_map_cache[key] = Node(value, key)
         self.insert(self.key_value_map_cache[key])
+        if len(self.key_value_map_cache) > self.capacity:
+            lru = self.left.next
+            self.remove(lru)
+            del self.key_value_map_cache[lru.key]
