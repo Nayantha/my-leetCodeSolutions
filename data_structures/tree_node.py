@@ -1,6 +1,6 @@
 class TreeNode:
     """
-
+    TreeNode represent a node in a Tree data structure.
     """
 
     def __init__(self, val=0, left=None, right=None):
