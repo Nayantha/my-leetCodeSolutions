@@ -12,8 +12,7 @@ def build_tree(preorder: list[int], inorder: list[int]) -> Optional[TreeNode]:
 def create_new_node(i: int, inorder: list[int]) -> Optional[TreeNode]:
     if i not in inorder:
         return None
-    new_node: Optional[TreeNode] = TreeNode(val=i, left=inorder[:inorder.index(i)],
-                                            right=inorder[inorder.index(i) + 1:])
+    new_node: Optional[TreeNode] = TreeNode(val=i)
     left_tree_value_list = inorder[:inorder.index(i)]
     if not left_tree_value_list:
         return None
