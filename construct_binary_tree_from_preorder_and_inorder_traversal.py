@@ -16,7 +16,7 @@ def create_new_node(inorder: list[int]) -> Optional[TreeNode]:
     if not inorder:
         return None
     middle_index = len(inorder) // 2
-    node = TreeNode(val=middle_index)
+    node = TreeNode(val=inorder[middle_index])
     node.left = create_new_node(inorder[:middle_index])
     node.right = create_new_node(inorder[middle_index + 1:])
     return node
