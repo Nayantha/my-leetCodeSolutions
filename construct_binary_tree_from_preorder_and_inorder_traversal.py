@@ -5,22 +5,18 @@ from data_structures.tree_node import TreeNode
 
 
 def build_tree(preorder: list[int], inorder: list[int]) -> Optional[TreeNode]:
-    root = create_new_node(preorder[0], inorder)
+    root = TreeNode(val=preorder[0])
+    index_of_root_value_in_inorder_list = inorder.index(preorder[0])
+    root.left = create_new_node(inorder[:index_of_root_value_in_inorder_list])
+    root.right = create_new_node(inorder[index_of_root_value_in_inorder_list + 1:])
     return root
 
 
-def create_new_node(i: int, inorder: list[int]) -> Optional[TreeNode]:
-    if i not in inorder or not inorder:
+def create_new_node(inorder: list[int]) -> Optional[TreeNode]:
+    if not inorder:
         return None
-    new_node: Optional[TreeNode] = TreeNode(val=i)
-    left_tree_value_list = inorder[:inorder.index(i)]
-    if not left_tree_value_list:
-        return None
-    left_tree_value = left_tree_value_list[len(left_tree_value_list) // 2]
-    new_node.left = create_new_node(left_tree_value, left_tree_value_list)
-    right_tree_value_list = inorder[inorder.index(i) + 1:]
-    if not right_tree_value_list:
-        return None
-    right_tree_value = right_tree_value_list[len(right_tree_value_list) // 2]
-    new_node.right = create_new_node(right_tree_value, right_tree_value_list)
-    return new_node
+    middle_index = len(inorder) // 2
+    node = TreeNode(val=middle_index)
+    node.left = create_new_node(inorder[:middle_index])
+    node.right = create_new_node(inorder[middle_index + 1:])
+    return node
