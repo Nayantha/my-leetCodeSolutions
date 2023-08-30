@@ -12,7 +12,7 @@ def build_tree(preorder: list[int], inorder: list[int]) -> Optional[TreeNode]:
     def helper_func(left, right):
         if left > right:
             return None
-        root = TreeNode(preorder.pop())
+        root = TreeNode(preorder.pop(0))
         index_of_root_val_in_inorder_list = values_to_index_map_of_inorder_list[root.val]
         root.left = helper_func(left, index_of_root_val_in_inorder_list - 1)
         root.right = helper_func(index_of_root_val_in_inorder_list + 1, right)
