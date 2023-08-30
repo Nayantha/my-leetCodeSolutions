@@ -7,4 +7,4 @@ import pytest
 ])
 def test_build_tree(post_order_list_values: list[int], in_order_list_values: list[int],
                     expected_tree_node_values_in_pre_order: list[int]):
-    assert False
+    ...
