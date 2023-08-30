@@ -14,8 +14,8 @@ def build_tree(preorder: list[int], inorder: list[int]) -> Optional[TreeNode]:
             return None
         root = TreeNode(preorder.pop())
         index_of_root_val_in_inorder_list = values_to_index_map_of_inorder_list[root.val]
-        root.right = helper_func(index_of_root_val_in_inorder_list + 1, right)
         root.left = helper_func(left, index_of_root_val_in_inorder_list - 1)
+        root.right = helper_func(index_of_root_val_in_inorder_list + 1, right)
         return root
 
     return helper_func(0, len(inorder) - 1)
