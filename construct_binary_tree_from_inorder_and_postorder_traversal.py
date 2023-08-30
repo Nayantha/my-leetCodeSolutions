@@ -1,2 +1,8 @@
 # https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
-def buildTree(self, inorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
+from typing import Optional
+
+from data_structures.tree_node import TreeNode
+
+
+def build_ree(self, inorder: list[int], postorder: list[int]) -> Optional[TreeNode]:
+    ...
