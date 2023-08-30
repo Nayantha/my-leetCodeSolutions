@@ -4,10 +4,10 @@ from typing import Optional
 from data_structures.tree_node import TreeNode
 
 
-def build_ree(inorder: list[int], postorder: list[int]) -> Optional[TreeNode]:
+def build_tree(inorder: list[int], postorder: list[int]) -> Optional[TreeNode]:
     if not postorder or not inorder:
         return None
     mid = inorder.index(postorder.pop())
     root = TreeNode(inorder[mid])
-    root.left = build_ree(inorder[:mid], postorder)
-    root.right = build_ree(inorder[mid + 1:], postorder)
+    root.left = build_tree(inorder[:mid], postorder)
+    root.right = build_tree(inorder[mid + 1:], postorder)
