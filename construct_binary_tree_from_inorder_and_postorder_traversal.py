@@ -11,3 +11,4 @@ def build_tree(inorder: list[int], postorder: list[int]) -> Optional[TreeNode]:
     root = TreeNode(inorder[mid])
     root.left = build_tree(inorder[:mid], postorder)
     root.right = build_tree(inorder[mid + 1:], postorder)
+    return root
