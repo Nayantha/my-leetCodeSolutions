@@ -7,8 +7,9 @@ from data_structures.tree_node import TreeNode
 def build_tree(inorder: list[int], postorder: list[int]) -> Optional[TreeNode]:
     if not postorder or not inorder:
         return None
-    mid = inorder.index(postorder.pop())
-    root = TreeNode(inorder[mid])
-    root.left = build_tree(inorder[:mid], postorder)
-    root.right = build_tree(inorder[mid + 1:], postorder)
-    return root
+    values_to_index_map_of_inorder_list = {value: index for index, value in enumerate(inorder)}
+
+    def helper_func(left, right):
+        ...
+
+    return helper_func(0, len(inorder) - 1)
