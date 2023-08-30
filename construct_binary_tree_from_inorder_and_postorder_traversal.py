@@ -4,5 +4,5 @@ from typing import Optional
 from data_structures.tree_node import TreeNode
 
 
-def build_ree(self, inorder: list[int], postorder: list[int]) -> Optional[TreeNode]:
+def build_ree(inorder: list[int], postorder: list[int]) -> Optional[TreeNode]:
     ...
