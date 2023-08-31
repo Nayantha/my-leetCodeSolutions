@@ -8,6 +8,8 @@ class Node:
 
 
 def connect(root: 'Node') -> 'Node':
+    if not root:
+        return root
     cur, nxt = root, root.left if root else None
     while cur and nxt:
         cur.left.next = cur.right
