@@ -10,5 +10,14 @@ class Node:
 def connect(root: 'Node') -> 'Node':
     cur, nxt = root, root.left if root else None
     while cur and nxt:
-        ...
+        cur.left.next = cur.right
+        if cur.next:
+            if cur.next.left:
+                cur.right.next = cur.next.left
+            else:
+                cur.right.next = cur.next.right
+        cur = cur.next
+        if not cur:
+            cur = nxt
+            nxt = cur.left
     return root
