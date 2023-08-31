@@ -14,3 +14,15 @@ def connect(root: 'Node') -> 'Node':
     if not root:
         return root
     queue = deque([root])
+    while queue:
+        pre: 'Node' = None
+        for _ in range(len(queue)):
+            cur = queue.popleft()
+            if pre:
+                pre.next = cur
+            if cur.left:
+                queue.append(cur.left)
+            if cur.right:
+                queue.append(cur.right)
+            pre = cur
+    return root
