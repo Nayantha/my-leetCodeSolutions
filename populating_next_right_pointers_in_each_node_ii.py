@@ -8,4 +8,7 @@ class Node:
 
 
 def connect(root: 'Node') -> 'Node':
-    ...
+    cur, nxt = root, root.left if root else None
+    while cur and nxt:
+        ...
+    return root
