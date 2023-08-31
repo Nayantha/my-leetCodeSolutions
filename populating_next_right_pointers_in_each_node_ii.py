@@ -7,5 +7,5 @@ class Node:
         self.next = next
 
 
-def connect(self: 'Node') -> 'Node':
+def connect(root: 'Node') -> 'Node':
     ...
