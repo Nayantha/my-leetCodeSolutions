@@ -5,12 +5,15 @@ from data_structures.tree_node import TreeNode
 
 
 def flatten(root: Optional[TreeNode]) -> None:
-    if not root:
-        return
-    right_tree: Optional[TreeNode] = root.right
-    left_tree: Optional[TreeNode] = root.left
-    root.right = root.left
-    root.left = None
-    while left_tree.right:
-        left_tree = left_tree.right
-    left_tree.right = right_tree
+    def dfs(root):
+        if not root:
+            return
+        lefttail = dfs(root.left)
+        righttail = dfs(root.right)
+        if lefttail:
+            lefttail.right = root.right
+            root.right = root.left
+            root.left = None
+        return righttail or lefttail or root
+
+    dfs(root)
