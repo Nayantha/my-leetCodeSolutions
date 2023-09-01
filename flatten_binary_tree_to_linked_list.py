@@ -8,12 +8,12 @@ def flatten(root: Optional[TreeNode]) -> None:
     def dfs(root):
         if not root:
             return
-        lefttail = dfs(root.left)
-        righttail = dfs(root.right)
-        if lefttail:
-            lefttail.right = root.right
+        left_tail = dfs(root.left)
+        right_tail = dfs(root.right)
+        if left_tail:
+            left_tail.right = root.right
             root.right = root.left
             root.left = None
-        return righttail or lefttail or root
+        return right_tail or left_tail or root
 
     dfs(root)
