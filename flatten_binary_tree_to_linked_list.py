@@ -5,6 +5,8 @@ from data_structures.tree_node import TreeNode
 
 
 def flatten(root: Optional[TreeNode]) -> None:
+    if not root:
+        return
     right_tree: Optional[TreeNode] = root.right
     left_tree: Optional[TreeNode] = root.left
     root.right = root.left
