@@ -7,9 +7,8 @@ from data_structures.tree_node import TreeNode
 def sum_numbers(root: Optional[TreeNode]) -> int:
     def dfs(curr, num):
         if not curr:
-            num = num * 10 + curr.left + num * 10 + curr.right
-            dfs(curr.left, num)
-            dfs(curr.right, num)
+            return 0
+
         return num
 
     return dfs(root, 0)
