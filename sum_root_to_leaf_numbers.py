@@ -18,4 +18,5 @@ def sum_numbers(root: Optional[TreeNode]) -> int:
 
 def sum_numbers_ii(root: Optional[TreeNode]) -> int:
     def pre_order_share_value(cur: Optional[TreeNode], value: str):
-        ...
+        if not cur:
+            return 0
