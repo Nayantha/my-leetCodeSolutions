@@ -9,5 +9,7 @@ def sum_numbers(root: Optional[TreeNode]) -> int:
         if not curr:
             return 0
         num = num * 10 + curr.val
+        if not curr.left and not curr.right:
+            return num
 
     return dfs(root, 0)
