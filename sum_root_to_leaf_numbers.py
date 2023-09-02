@@ -17,6 +17,16 @@ def sum_numbers(root: Optional[TreeNode]) -> int:
 
 
 def sum_numbers_ii(root: Optional[TreeNode]) -> int:
-    def pre_order_share_value(cur: Optional[TreeNode], value: str):
+    res = 0
+
+    def pre_order_share_value(cur: Optional[TreeNode], value: str, res):
         if not cur:
             return 0
+        value += cur.val
+        if not cur.left and cur.right:
+            res += int(value)
+        pre_order_share_value(cur.left, value.res)
+        pre_order_share_value(cur.right, value.res)
+
+    pre_order_share_value(root, "", res)
+    return res
