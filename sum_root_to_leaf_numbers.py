@@ -14,3 +14,7 @@ def sum_numbers(root: Optional[TreeNode]) -> int:
         return dfs(curr.left, num) + dfs(curr.right, num)
 
     return dfs(root, 0)
+
+
+def sum_numbers_ii(root: Optional[TreeNode]) -> int:
+    ...
