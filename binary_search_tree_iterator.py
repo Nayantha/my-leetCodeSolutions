@@ -7,7 +7,10 @@ from data_structures.tree_node import TreeNode
 class BSTIterator:
 
     def __init__(self, root: Optional[TreeNode]):
-        ...
+        self.stack = []
+        while root:
+            self.stack.append(root.val)
+            root = root.left
 
     def next(self) -> int:
         ...
