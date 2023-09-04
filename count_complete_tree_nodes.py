@@ -10,3 +10,7 @@ def count_nodes(root: Optional[TreeNode]) -> int:
             count += 1
             inorder_traversal(node.left, count)
             inorder_traversal(node.right, count)
+
+    res = 0
+    inorder_traversal(root, res)
+    return res
