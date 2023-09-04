@@ -16,5 +16,5 @@ def count_nodes(root: Optional[TreeNode]) -> int:
         right_height += 1
         right_tree = right_tree.right
     if left_height == right_height:
-        return pow(2, right_height)
+        return pow(2, right_height) - 1
     return 1 + count_nodes(root.left) + count_nodes(root.right)
