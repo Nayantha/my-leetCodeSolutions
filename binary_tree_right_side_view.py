@@ -6,4 +6,7 @@ from data_structures.tree_node import TreeNode
 
 def right_side_view(root: Optional[TreeNode]) -> list[int]:
     right_node_values: list[int] = []
+    while root:
+        right_node_values.append(root.val)
+        root = root.right
     return right_node_values
