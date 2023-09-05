@@ -4,7 +4,7 @@ from typing import List, Optional
 from binary_tree_inorder_traversal import TreeNode
 
 
-def sorted_array_to_bst(self, nums: List[int]) -> Optional[TreeNode]:
+def sorted_array_to_bst(nums: List[int]) -> Optional[TreeNode]:
     # get middle element that is the root
 
     def get_middle_element(num_list: List[int]):
