@@ -5,4 +5,5 @@ from data_structures.tree_node import TreeNode
 
 
 def level_order(self, root: Optional[TreeNode]) -> list[list[int]]:
-    ...
+    res: list[list[int]] = []
+    return res
