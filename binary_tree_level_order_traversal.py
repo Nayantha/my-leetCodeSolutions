@@ -1,2 +1,8 @@
 # https://leetcode.com/problems/binary-tree-level-order-traversal/
-def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+from typing import Optional
+
+from data_structures.tree_node import TreeNode
+
+
+def level_order(self, root: Optional[TreeNode]) -> list[list[int]]:
+    ...
