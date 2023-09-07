@@ -13,7 +13,9 @@ def level_order(self, root: Optional[TreeNode]) -> list[list[int]]:
         for i in range(len(node_queue)):
             node = node_queue.popleft()
             if node:
-                level_nodes.append(node.left)
-                level_nodes.append(node.right)
-        res.append(level_nodes)
+                level_nodes.append(node.val)
+                node_queue.append(node.left)
+                node_queue.append(node.right)
+        if level_nodes:
+            res.append(level_nodes)
     return res
