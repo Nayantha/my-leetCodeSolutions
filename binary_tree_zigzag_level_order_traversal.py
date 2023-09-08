@@ -22,3 +22,27 @@ def zigzag_level_order(root: Optional[TreeNode]) -> list[list[int]]:
             else:
                 res.append(level_nodes[::-1])
     return res
+
+
+def zigzag_level_order_fast(root: Optional[TreeNode]) -> list[list[int]]:
+    queue = deque([root])
+    result = []
+    layer = 0
+
+    if not root:
+        return result
+
+    while queue:
+        nodeLayer = []
+        for i in range(len(queue)):
+            node = queue.popleft()
+            nodeLayer.append(node.val)
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+        if layer % 2:
+            nodeLayer.reverse()
+        result.append(nodeLayer)
+        layer += 1
+    return result
