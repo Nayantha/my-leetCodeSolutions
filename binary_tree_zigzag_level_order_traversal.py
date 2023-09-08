@@ -17,5 +17,5 @@ def zigzag_level_order(root: Optional[TreeNode]) -> list[list[int]]:
                 tree_nodes.append(node.left)
                 tree_nodes.append(node.right)
         if level_nodes:
-            res.append(level_nodes)
+            res.append(level_nodes[::-1])
     return res
