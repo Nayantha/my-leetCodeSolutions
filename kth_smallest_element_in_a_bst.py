@@ -30,4 +30,5 @@ def kth_smallest_inorder(root: Optional[TreeNode], k: int) -> int:
             res.append(node.val)
             inorder(node.right)
 
-    return inorder(root)
+    inorder(root)
+    return res[-1]
