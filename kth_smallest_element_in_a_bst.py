@@ -18,3 +18,16 @@ def kth_smallest(root: Optional[TreeNode], k: int) -> int:
             return current_node.val
         current_node = current_node.right
     return index_of_the_number
+
+def kth_smallest_inorder(root: Optional[TreeNode], k: int) -> int:
+    res = []
+
+    def inorder(node: TreeNode) -> int:
+        if node:
+            inorder(node.left)
+            if len(res) == k:
+                return node.val
+            res.append(node.val)
+            inorder(node.right)
+
+    return inorder(root)
