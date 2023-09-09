@@ -8,7 +8,7 @@ def kth_smallest(root: Optional[TreeNode], k: int) -> int:
     node_stack = []
     current_node = root
     index_of_the_number = 0
-    while node_stack and current_node:
+    while node_stack or current_node:
         while current_node:
             node_stack.append(current_node)
             current_node = current_node.left
