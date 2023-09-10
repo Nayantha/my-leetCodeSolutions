@@ -13,3 +13,5 @@ def is_valid_bst(root: Optional[TreeNode]) -> bool:
         inorder_traverse(node.left)
         node_values.append(node.val)
         inorder_traverse(node.right)
+    # return all(x < y for x, y in zip(result, result[1:]))
+    return node_values == sorted(node_values)
