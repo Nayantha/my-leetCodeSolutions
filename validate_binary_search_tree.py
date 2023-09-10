@@ -11,4 +11,4 @@ def is_valid_bst(root: Optional[TreeNode]) -> bool:
         if not (left_boundary < node.val < right_boundary):
             return False
         return is_valid(node.left, left_boundary, node.val) and is_valid(node.right, node.val, right_boundary)
-    is_valid(root, int("-inf"), int("-inf"))
+    return is_valid(root, int("-inf"), int("-inf"))
