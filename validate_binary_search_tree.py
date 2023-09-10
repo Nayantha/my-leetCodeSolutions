@@ -5,4 +5,4 @@ from data_structures.tree_node import TreeNode
 
 
 def is_valid_bst(root: Optional[TreeNode]) -> bool:
-    ...
+    return root.left.val < root.right and is_valid_bst(root.left) and is_valid_bst(root.right)
