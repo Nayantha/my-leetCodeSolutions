@@ -16,8 +16,7 @@ def num_islands(grid: list[list[str]]) -> int:
             directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
             for dr, dc in directions:
                 r, c = row + dr, dc + col
-                visited_indexes.add((r, c))
-                if grid[r][c] == "1" and (r, c) not in visited_indexes and r < rows and c < columns:
+                if r < rows and c < columns and grid[r][c] == "1" and (r, c) not in visited_indexes:
                     queue.append((r, c))
                     visited_indexes.add((r, c))
 
