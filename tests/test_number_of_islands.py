@@ -1,5 +1,7 @@
 import pytest
 
+from number_of_islands import num_islands
+
 
 @pytest.mark.parametrize("grid, expected_island_amount", [
     (
@@ -20,4 +22,4 @@ import pytest
     )
 ])
 def test_num_islands(grid: list[list[str]], expected_island_amount: int):
-    assert False
+    assert num_islands(grid) == expected_island_amount
