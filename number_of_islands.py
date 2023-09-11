@@ -21,4 +21,10 @@ def num_islands(grid: list[list[str]]) -> int:
                     queue.append((r, c))
                     visited_indexes.add((r, c))
 
+    for r in range(rows):
+        for c in range(columns):
+            if grid[r][c] == "1" and (r, c) not in visited_indexes:
+                bfs(r, c)
+                number_of_islands += 1
+
     return number_of_islands
