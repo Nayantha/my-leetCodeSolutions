@@ -1,3 +1,3 @@
 # https://leetcode.com/problems/number-of-islands/
-def num_islands(grid: List[List[str]]) -> int:
+def num_islands(grid: list[list[str]]) -> int:
     ...
