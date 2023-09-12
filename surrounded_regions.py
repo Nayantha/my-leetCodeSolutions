@@ -24,3 +24,7 @@ def solve(board: list[list[str]]) -> None:
             if board[row_index][column_index] == "O":
                 board[row_index][column_index] = "X"
     # rename un-surrounded regions
+    for row_index in range(rows):
+        for column_index in range(columns):
+            if board[row_index][column_index] == "T":
+                board[row_index][column_index] = "0"
