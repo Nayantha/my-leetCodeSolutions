@@ -19,4 +19,8 @@ def solve(board: list[list[str]]) -> None:
                     row_index in [0, rows - 1] or column_index in [0, columns - 1]):
                 capture(row_index, column_index)
     # get surrounded regions
+    for row_index in range(rows):
+        for column_index in range(columns):
+            if board[row_index][column_index] == "O":
+                board[row_index][column_index] = "X"
     # rename un-surrounded regions
