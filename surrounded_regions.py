@@ -8,9 +8,9 @@ def solve(board: list[list[str]]) -> None:
         for column_index in range(1, columns - 1):
             if board_copy[row_index][column_index] == "O":
                 directions = [
-                    [-1, -1], [-1, 0], [-1, 1],
+                    [-1, 0],
                     [0, -1], [0, 1],
-                    [1, -1], [1, 0], [1, 1]
+                    [1, 0],
                 ]
                 sum_of_x = 0
                 sum_of_o = 0
