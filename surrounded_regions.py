@@ -27,4 +27,4 @@ def solve(board: list[list[str]]) -> None:
     for row_index in range(rows):
         for column_index in range(columns):
             if board[row_index][column_index] == "T":
-                board[row_index][column_index] = "0"
+                board[row_index][column_index] = "O"
