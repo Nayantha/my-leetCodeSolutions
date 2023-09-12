@@ -6,9 +6,9 @@ def solve(board: list[list[str]]) -> None:
     board_copy = board.copy()
     for row_index in range(1, rows - 1):
         for column_index in range(1, columns - 1):
-            if board_copy[row_index][column_index] == "O":
-                directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
-                for dr, dc in directions:
-                    row, column = row_index + dr, column_index + dc
-                    if row in range(rows) and column in range(columns) and board_copy[row][column] == "O":
-                        board[row][column] = "X"
+            if board_copy[row_index][column_index] == "O" and \
+                    board_copy[row_index + 1][column_index] == "X" and \
+                    board_copy[row_index - 1][column_index] == "X" and \
+                    board_copy[row_index][column_index + 1] == "X" and \
+                    board_copy[row_index][column_index - 1] == "X":
+                board[row_index][column_index] = "X"
