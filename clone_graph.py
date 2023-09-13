@@ -19,3 +19,4 @@ def clone_graph(node: Optional['Node']) -> Optional['Node']:
         for neighbour_node in old_node.neighbors:
             new_node.neighbors.appenddfs(neighbour_node)
         return new_node
+    return clone_node(node)
