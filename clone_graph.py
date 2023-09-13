@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/clone-graph/description/
+import copy
 from typing import Optional
 
 
@@ -9,4 +10,4 @@ class Node:
 
 
 def clone_graph(node: Optional['Node']) -> Optional['Node']:
-    ...
+    return copy.deepcopy(node)
