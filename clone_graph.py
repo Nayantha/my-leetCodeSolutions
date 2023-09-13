@@ -2,5 +2,5 @@
 from typing import Optional
 
 
-class Solution:
-    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+def clone_graph(node: Optional['Node']) -> Optional['Node']:
+    ...
