@@ -13,4 +13,7 @@ def calc_equation(equations: list[list[str]], values: list[float], queries: list
         # given a / b, src = a, b = target. find a way from a to b
         ...
 
+    for query in queries:
+        dfs(query[0], query[1])
+
     return []
