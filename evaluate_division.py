@@ -22,5 +22,5 @@ def calc_equation(equations: list[list[str]], values: list[float], queries: list
                 if nei not in visited_items:
                     queue.append([nei, weight * numerator_to_denominator_map[node][nei]])
                     visited_items.add(nei)
-            return -1
+        return -1
     return [bfs(query[0], query[1]) for query in queries]
