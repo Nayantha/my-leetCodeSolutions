@@ -9,7 +9,7 @@ def calc_equation(equations: list[list[str]], values: list[float], queries: list
         numerator_to_denominator_map[a][b] = values[i]
         numerator_to_denominator_map[b][a] = 1 / values[i]
 
-    def bfs(src, target):
+    def bfs(src, target) -> float:
         # given a / b, src = a, b = target. find a way from a to b
         ...
 
