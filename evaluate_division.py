@@ -11,6 +11,7 @@ def calc_equation(equations: list[list[str]], values: list[float], queries: list
 
     def bfs(src, target) -> float:
         # given a / b, src = a, b = target. find a way from a to b
-        ...
+        if src not in numerator_to_denominator_map or target not in numerator_to_denominator_map:
+            return -1
 
     return [bfs(query[0], query[1]) for query in queries]
