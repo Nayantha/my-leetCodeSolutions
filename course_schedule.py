@@ -1,2 +1,3 @@
 # https://leetcode.com/problems/course-schedule/description/
-def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+def can_finish(numCourses: int, prerequisites: list[list[int]]) -> bool:
+    ...
