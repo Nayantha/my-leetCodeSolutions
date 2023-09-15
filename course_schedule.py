@@ -5,5 +5,15 @@ def can_finish(numCourses: int, prerequisites: list[list[int]]) -> bool:
         prerequisites_course_map[course].append(prerequisite)
     completed_courses = set()
 
-    def dfs():
-        ...
+    def dfs(current_course: int):
+        if current_course in completed_courses:
+            return False
+        if not prerequisites_course_map[current_course]:
+            return True
+        completed_courses.add(current_course)
+        for prerequisite_course in prerequisites_course_map[current_course]:
+            if not dfs(prerequisite_course):
+                return False
+        completed_courses.remove(current_course)
+        prerequisites_course_map[current_course] = []
+        return True
