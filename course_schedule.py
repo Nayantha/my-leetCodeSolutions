@@ -17,3 +17,4 @@ def can_finish(numCourses: int, prerequisites: list[list[int]]) -> bool:
         completed_courses.remove(current_course)
         prerequisites_course_map[current_course] = []
         return True
+    return all(dfs(course) for course in range(numCourses))
