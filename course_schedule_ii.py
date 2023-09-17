@@ -1,2 +1,3 @@
 # https://leetcode.com/problems/course-schedule-ii/description/
-def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
+    ...
