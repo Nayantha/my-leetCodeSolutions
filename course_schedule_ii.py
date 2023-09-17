@@ -20,4 +20,4 @@ def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
         course_complete_order.append(course_number)
         return True
 
-    return []
+    return course_complete_order if all(dfs(course) for course in range(num_courses)) else []
