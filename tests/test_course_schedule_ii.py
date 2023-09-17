@@ -1,5 +1,7 @@
 import pytest
 
+from course_schedule_ii import find_order
+
 
 @pytest.mark.parametrize("num_courses, prerequisites, expected", [
     (2, [[1, 0]], [0, 1]),
@@ -7,4 +9,4 @@ import pytest
     (1, [], 0)
 ])
 def test_find_order(num_courses: int, prerequisites: list[list[int]], expected: list[int]):
-    assert False
+    assert find_order(num_courses, prerequisites) == expected
