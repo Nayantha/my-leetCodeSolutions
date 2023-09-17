@@ -5,4 +5,8 @@ def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
         course_to_prerequisites_map[course].append(prerequisite)
     completed_courses, completed_courses_in_cycle = set(), set()
     course_complete_order = []
+
+    def dfs(course_number: int):
+        ...
+
     return []
