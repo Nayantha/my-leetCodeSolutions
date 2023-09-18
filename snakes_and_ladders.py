@@ -4,6 +4,7 @@ from collections import deque
 
 def snakes_and_ladders(board: list[list[int]]) -> int:
     board_length = len(board)
+    board.reverse()
 
     def int_to_position(number: int):
         number -= 1
