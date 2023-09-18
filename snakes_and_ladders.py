@@ -22,7 +22,7 @@ def snakes_and_ladders(board: list[list[int]]) -> int:
         for i in range(1, 7):
             next_number = number + i
             row, column = int_to_position(next_number)
-            if board[row][column] == -1:
+            if board[row][column] != -1:
                 next_number = board[row][column]
             if next_number == board_length ** 2:
                 return moves_done + 1
