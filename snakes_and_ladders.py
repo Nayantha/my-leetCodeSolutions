@@ -12,3 +12,14 @@ def snakes_and_ladders(board: list[list[int]]) -> int:
     visited_numbers = set()
     while queue:
         number, moves_done = queue.popleft()
+        for i in range(1, 7):
+            next_number = number + i
+            row, column = int_to_position(next_number)
+            if board[row][column] == -1:
+                next_number = board[row][column]
+            if next_number == board_length ** 2:
+                return moves_done + 1
+            if next_number not in visited_numbers:
+                visited_numbers.add(next_number)
+                queue.append([next_number, moves_done + 1])
+    return -1
