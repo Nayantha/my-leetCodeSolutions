@@ -9,6 +9,8 @@ def snakes_and_ladders(board: list[list[int]]) -> int:
         number -= 1
         row = number // board_length
         column = number % board_length
+        if row % 2:
+            column = board_length - 1
         return [row, column]
 
     queue = deque()  # [number, no of moves to get there]
