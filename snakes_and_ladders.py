@@ -6,7 +6,10 @@ def snakes_and_ladders(board: list[list[int]]) -> int:
     board_length = len(board)
 
     def int_to_position(number: int):
-        return [number // board_length, number % board_length]
+        number -= 1
+        row = number // board_length
+        column = number % board_length
+        return [row, column]
 
     queue = deque()  # [number, no of moves to get there]
     queue.append([1, 0])
