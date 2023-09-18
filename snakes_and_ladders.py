@@ -1,2 +1,3 @@
 # https://leetcode.com/problems/snakes-and-ladders/description/
-def snakesAndLadders(self, board: List[List[int]]) -> int:
+def snakes_and_ladders(board: list[list[int]]) -> int:
+    ...
