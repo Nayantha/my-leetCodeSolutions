@@ -1,5 +1,7 @@
 import pytest
 
+from snakes_and_ladders import snakes_and_ladders
+
 
 @pytest.mark.parametrize("board, min_turns_to_top", [
     ([
@@ -16,4 +18,4 @@ import pytest
      ], 1)
 ])
 def test_snakes_and_ladders(board: list[list[int]], min_turns_to_top: int):
-    assert False
+    assert snakes_and_ladders(board) == min_turns_to_top
