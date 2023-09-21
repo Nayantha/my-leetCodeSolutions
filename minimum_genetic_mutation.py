@@ -9,7 +9,8 @@ def min_mutation(startGene: str, endGene: str, bank: list[str]) -> int:
         if startGene[i] != endGene[i]:
             changed_indexes.append(i)
     queue = deque([startGene])
-    visited_genes = set(startGene)
+    visited_genes = set()
+    visited_genes.add(startGene)
     total_mutations = 0
     while queue:
         gene = queue.popleft()
