@@ -5,3 +5,5 @@ def min_mutation(startGene: str, endGene: str, bank: list[str]) -> int:
     for i in range(len(startGene)):
         if startGene[i] != endGene[i]:
             changed_indexes.append(i)
+    if len(changed_indexes) == 1 and endGene in bank:
+        return 1
