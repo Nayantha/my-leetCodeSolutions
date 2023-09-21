@@ -16,7 +16,7 @@ def min_mutation(startGene: str, endGene: str, bank: list[str]) -> int:
         gene = queue.popleft()
         if gene == endGene:
             return total_mutations
-        for i in changed_indexes:
+        for i in range(len(startGene)):
             for base in possible_bases:
                 mutated_gene = f"{gene[:i]}{base}{gene[i + 1:]}"
                 if mutated_gene in bank and mutated_gene not in visited_genes:
