@@ -3,11 +3,7 @@ from collections import deque
 
 
 def min_mutation(startGene: str, endGene: str, bank: list[str]) -> int:
-    changed_indexes = []
     possible_bases = ['A', 'C', 'G', 'T']
-    for i in range(len(startGene)):
-        if startGene[i] != endGene[i]:
-            changed_indexes.append(i)
     queue = deque([startGene])
     visited_genes = set()
     visited_genes.add(startGene)
