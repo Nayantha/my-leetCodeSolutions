@@ -23,4 +23,4 @@ def min_mutation(startGene: str, endGene: str, bank: list[str]) -> int:
                     visited_genes.add(mutated_gene)
                     queue.append(mutated_gene)
         total_mutations += 1
-    return total_mutations
+    return -1
