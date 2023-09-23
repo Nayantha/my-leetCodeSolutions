@@ -5,7 +5,7 @@ class Trie:
         self._word: str = ""
 
     def insert(self, word: str) -> None:
-        ...
+        self._word = word
 
     def search(self, word: str) -> bool:
         ...
