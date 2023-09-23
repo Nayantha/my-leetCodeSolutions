@@ -8,7 +8,8 @@ class Trie:
         self._word = word
 
     def search(self, word: str) -> bool:
-        ...
-
+        if word == self._word:
+            return True
+        return False
     def startsWith(self, prefix: str) -> bool:
         ...
