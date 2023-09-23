@@ -2,7 +2,7 @@
 class Trie:
 
     def __init__(self):
-        ...
+        self._word: str = ""
 
     def insert(self, word: str) -> None:
         ...
