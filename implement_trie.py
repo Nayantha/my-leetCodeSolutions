@@ -8,15 +8,15 @@ class TrieNode:
 class Trie:
 
     def __init__(self):
-        self.letter_collection: TrieNode = TrieNode()
+        self.root_node: TrieNode = TrieNode()
 
     def insert(self, word: str) -> None:
-        self.letter_collection = word
+        self.root_node = word
 
     def search(self, word: str) -> bool:
-        if word == self.letter_collection:
+        if word == self.root_node:
             return True
         return False
 
     def startsWith(self, prefix: str) -> bool:
-        return self.letter_collection.startswith(prefix)
+        return self.root_node.startswith(prefix)
