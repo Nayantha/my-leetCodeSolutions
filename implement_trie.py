@@ -24,4 +24,9 @@ class Trie:
         return current_node.is_last_letter
 
     def startsWith(self, prefix: str) -> bool:
-        return self.root_node.startswith(prefix)
+        current_node: TrieNode = self.root_node
+        for letter in prefix:
+            if letter not in current_node.letter_collections:
+                return False
+            current_node = current_node[letter]
+        return True
