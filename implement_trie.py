@@ -11,7 +11,10 @@ class Trie:
         self.root_node: TrieNode = TrieNode()
 
     def insert(self, word: str) -> None:
-        self.root_node = word
+        current_node: TrieNode = self.root_node
+        for letter in word:
+            if letter not in current_node.letter_collections:
+                current_node.letter_collections[letter] = TrieNode()
 
     def search(self, word: str) -> bool:
         if word == self.root_node:
