@@ -17,9 +17,11 @@ class Trie:
                 current_node.letter_collections[letter] = TrieNode()
 
     def search(self, word: str) -> bool:
-        if word == self.root_node:
-            return True
-        return False
+        current_node: TrieNode = self.root_node
+        for letter in word:
+            if letter not in current_node.letter_collections:
+                return False
+        return current_node.is_last_letter
 
     def startsWith(self, prefix: str) -> bool:
         return self.root_node.startswith(prefix)
