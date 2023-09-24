@@ -13,6 +13,4 @@ class Trie:
         return False
 
     def startsWith(self, prefix: str) -> bool:
-        if prefix in self._word:
-            return True
-        return False
+        return self._word.startswith(prefix)
