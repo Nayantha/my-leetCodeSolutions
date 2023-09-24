@@ -8,7 +8,7 @@ class TrieNode:
 class Trie:
 
     def __init__(self):
-        self.letter_collection: dict = {}
+        self.letter_collection: TrieNode = TrieNode()
 
     def insert(self, word: str) -> None:
         self.letter_collection = word
