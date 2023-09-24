@@ -1,4 +1,10 @@
 # https://leetcode.com/problems/implement-trie-prefix-tree/description/
+class TrieNode:
+    def __init__(self):
+        self.letter_collections = {}
+        self.is_last_letter = False
+
+
 class Trie:
 
     def __init__(self):
