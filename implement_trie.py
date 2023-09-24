@@ -28,5 +28,5 @@ class Trie:
         for letter in prefix:
             if letter not in current_node.letter_collections:
                 return False
-            current_node = current_node[letter]
+            current_node = current_node.letter_collections[letter]
         return True
