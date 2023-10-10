@@ -2,7 +2,10 @@
 class WordDictionary:
 
     def __init__(self):
+        ...
 
-    def addWord(self, word: str) -> None:
+    def add_word(self, word: str) -> None:
+        ...
 
     def search(self, word: str) -> bool:
+        ...
