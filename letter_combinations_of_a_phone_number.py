@@ -18,3 +18,9 @@ def letter_combinations(digits: str) -> list[str]:
             return
         for letter in digit_to_letter_dict[int(digits[i])]:  # str
             backtrack(i + 1, current_str + letter)
+
+    if digits:
+        backtrack(0, "")
+        return combination_list
+    else:
+        return []
