@@ -10,3 +10,11 @@ def letter_combinations(digits: str) -> list[str]:
         8: ['t', 'u', 'v'],
         9: ['w', 'x', 'y', 'z']
     }
+    combination_list = []
+
+    def backtrack(i: int, current_str):
+        if len(current_str) == len(digits):
+            combination_list.append(current_str)
+            return
+        for letter in digit_to_letter_dict[int(digits[i])]:  # str
+            backtrack(i + 1, current_str + letter)
