@@ -27,6 +27,6 @@ class WordDictionary:
                     if letter not in current_node.letter_collections:
                         return False
                     current_node = current_node.letter_collections[letter]
-                return current_node.is_last_letter
+            return current_node.is_last_letter
 
         return dfs(0, self.root)
