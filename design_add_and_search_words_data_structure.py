@@ -10,7 +10,7 @@ class WordDictionary:
         for letter in word:
             if letter not in current_node.letter_collections:
                 current_node.letter_collections[letter] = TrieNode()
-            current_node = current_node[letter]
+            current_node = current_node.letter_collections[letter]
         current_node.is_last_letter = True
 
     def search(self, word: str) -> bool:
