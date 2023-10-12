@@ -1,2 +1,3 @@
 # https://leetcode.com/problems/combinations/
-def combine(self, n: int, k: int) -> List[List[int]]:
+def combine(n: int, k: int) -> list[list[int]]:
+    ...
