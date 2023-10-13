@@ -1,3 +1,3 @@
 # https://leetcode.com/problems/permutations/description/
-def permutation(k: list[int]) -> list[list[int]]:
+def permutation(nums: list[int]) -> list[list[int]]:
     ...
