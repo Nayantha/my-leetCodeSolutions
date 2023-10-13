@@ -4,3 +4,13 @@ def permute(nums: list[int]) -> list[list[int]]:
         return [[]]
     if len(nums) == 1:
         return [nums.copy()]
+    result = []
+    for i in range(len(nums)):
+        num = nums.pop(0)
+        perms = permute(nums)
+        for perm in perms:
+            perm.append(num)
+        result.extend(perms)
+
+        nums.append(num)
+    return result
