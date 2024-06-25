@@ -8,9 +8,10 @@ def generate_parentheses(n: int) -> List[str]:
 
     def backtrack(open_parenthesis_count, closed_parenthesis_count):
         if open_parenthesis_count == closed_parenthesis_count == n:
-            return result.append("".join(stack))
+            result.append("".join(stack))
+            return
 
-        if open_parenthesis_count == closed_parenthesis_count:
+        if open_parenthesis_count < n:
             stack.append("(")
             backtrack(open_parenthesis_count + 1, closed_parenthesis_count)
             stack.pop()
@@ -19,5 +20,7 @@ def generate_parentheses(n: int) -> List[str]:
             stack.append(")")
             backtrack(open_parenthesis_count, closed_parenthesis_count + 1)
             stack.pop()
+
+    backtrack(0, 0)
 
     return result
