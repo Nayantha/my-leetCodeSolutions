@@ -3,4 +3,21 @@ from typing import List
 
 
 def generate_parentheses(n: int) -> List[str]:
-    ...
+    stack: list[str] = []
+    result: list[str] = []
+
+    def backtrack(open_parenthesis_count, closed_parenthesis_count):
+        if open_parenthesis_count == closed_parenthesis_count == n:
+            return result.append("".join(stack))
+
+        if open_parenthesis_count == closed_parenthesis_count:
+            stack.append("(")
+            backtrack(open_parenthesis_count + 1, closed_parenthesis_count)
+            stack.pop()
+
+        if closed_parenthesis_count < open_parenthesis_count:
+            stack.append(")")
+            backtrack(open_parenthesis_count, closed_parenthesis_count + 1)
+            stack.pop()
+
+    return result
